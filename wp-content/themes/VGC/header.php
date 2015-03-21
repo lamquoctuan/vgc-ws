@@ -25,31 +25,27 @@
                         <div class="col-md-3 col-sms12">
                             <p class="welcome-msg">Welcome to Vancouver Gold for Cash!</p>
                         </div>
+<?php
+$classes = array(
+    'ul' => 'links',
+    'li_first' => 'first',
+    'li_last' => 'last'
+);
+$menu = getMenuList('top-nav-right', $classes);
+?>
                         <div class="col-md-2 col-sms12">
                             <div class="special-offer"><a href="">Special Offer</a></div>
                             <div class="link-mobile">
                                 <div class="title-link">
-                                    <h2>Account</h2>
+                                    <h2><?php echo $menu['menu_name'];?></h2>
                                 </div>
                                 <div class="link-content">
-                                    <ul class="links">
-                                        <li class="first"><a href="#" title="Account">Account</a>
-                                        </li>
-                                        <li><a href="#" title="Wish List">Wish List</a>
-                                        </li>
-                                        <li class="last"><a href="#" title="My Cart" class="top-link-cart">Cart(0)</a>
-                                        </li>
-                                    </ul>
+                                    <?php echo $menu['menu_list'];?>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-7 col-sms12">
-                            <ul class="links">
-                                <li class="first"><a href="" title="Account">Account</a></li>
-                                <li><a href="" title="Wish list">Wish List</a></li>
-                                <li><a href="" title="Cart" class="top-link-cart">Cart (0)</a></li>
-                            </ul>
-
+                            <?php echo $menu['menu_list'];?>
                         </div>
 
                     </div>
