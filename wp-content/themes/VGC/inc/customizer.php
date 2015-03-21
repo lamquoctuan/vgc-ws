@@ -18,7 +18,7 @@ if ( ! function_exists( 'getMenuList' ) ) :
  *                                  );
  * @return array   $menuList   List of menu in html
  */
-function getMenuList( $menuSlug, $classes = array() ) {
+function getMenuList( $menuSlug, $classes = array() , $menuId = '' ) {
 
     $result = array();
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menuSlug ] ) ) {
@@ -27,7 +27,7 @@ function getMenuList( $menuSlug, $classes = array() ) {
         $menuItems = wp_get_nav_menu_items($menu->term_id);
         $result['menu_name'] = $menu->name;
 
-        $result['menu_list'] = '<ul id="menu-' . $menuSlug . '"'. (isset($classes['ul'])?' class="' . $classes['ul'] . '"':'') .'>';
+        $result['menu_list'] = '<ul id="' . (empty($menuId)?'menu-' . $menuSlug:$menuId) . '"'. (isset($classes['ul'])?' class="' . $classes['ul'] . '"':'') .'>';
 
         foreach ( (array) $menuItems as $key => $menuItem ) {
             $title = $menuItem->title;

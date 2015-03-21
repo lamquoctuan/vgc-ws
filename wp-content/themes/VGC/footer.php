@@ -55,9 +55,9 @@
                     </div>
                     <div class="footer-static-content">
                         <div class="f-social">
-                            <a href=""><img src="<?php echo TEMP_DIR;?>/images/icon-tw.png" /></a>
-                            <a href=""><img src="<?php echo TEMP_DIR;?>/images/icon-lk.png" /></a>
-                            <a href=""><img src="<?php echo TEMP_DIR;?>/images/icon-fb.png" /></a>
+                            <a href=""><img src="<?php echo TEMP_URI;?>/images/icon-tw.png" /></a>
+                            <a href=""><img src="<?php echo TEMP_URI;?>/images/icon-lk.png" /></a>
+                            <a href=""><img src="<?php echo TEMP_URI;?>/images/icon-fb.png" /></a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="col-xs-12 col-sm-6">
                         <div class="box-footer">
                             <div class="f-images">
-                                <img src="<?php echo TEMP_DIR;?>/images/paypal.png" />
+                                <img src="<?php echo TEMP_URI;?>/images/paypal.png" />
                             </div>
                         </div>
                     </div>

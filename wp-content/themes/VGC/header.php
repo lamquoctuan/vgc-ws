@@ -31,21 +31,23 @@ $classes = array(
     'li_first' => 'first',
     'li_last' => 'last'
 );
-$menu = getMenuList('top-nav-right', $classes);
+$menuTopRight = getMenuList('top-nav-right', $classes);
+$menuMain = getMenuList('primary');
+$menuLeftSide = getMenuList('left-side');
 ?>
                         <div class="col-md-2 col-sms12">
                             <div class="special-offer"><a href="">Special Offer</a></div>
                             <div class="link-mobile">
                                 <div class="title-link">
-                                    <h2><?php echo $menu['menu_name'];?></h2>
+                                    <h2><?php echo $menuTopRight['menu_name'];?></h2>
                                 </div>
                                 <div class="link-content">
-                                    <?php echo $menu['menu_list'];?>
+                                    <?php echo $menuTopRight['menu_list'];?>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-7 col-sms12">
-                            <?php echo $menu['menu_list'];?>
+                            <?php echo $menuTopRight['menu_list'];?>
                         </div>
 
                     </div>
@@ -57,7 +59,7 @@ $menu = getMenuList('top-nav-right', $classes);
                     <div class="header-content">
                         <div class="row">
                             <div class="col-xs-12 col-md-3 col-sm-12">
-                                <a href="" title="Vancouver Gold for Cash" class="logo"><strong>Vancouver Gold for Cash</strong><img src="<?php echo TEMP_DIR;?>/images/logo-orange.png" alt="Vancouver Gold for Cash"></a>
+                                <a href="" title="Vancouver Gold for Cash" class="logo"><strong>Vancouver Gold for Cash</strong><img src="<?php echo TEMP_URI;?>/images/logo-orange.png" alt="Vancouver Gold for Cash"></a>
                             </div>
                             <div class="col-xs-12 col-md-6 col-sm-12">
                                 <div class="header-box">
@@ -165,13 +167,7 @@ $menu = getMenuList('top-nav-right', $classes);
                     </div>
                     <div id="pt_menu_link" class="pt_menu">
                         <div class="parentMenu">
-                            <ul>
-                                <li><a href="">About Us</a></li>
-                                <li><a href="">Events</a></li>
-                                <li><a href="">Collections</a></li>
-                                <li><a href="">Blog</a></li>
-                                <li><a href="">Contact</a></li>
-                            </ul>
+                            <?php echo $menuMain['menu_list'];?>
                         </div>
                     </div>
                     <div class="clearBoth"></div>
