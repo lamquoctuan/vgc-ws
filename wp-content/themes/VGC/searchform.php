@@ -5,6 +5,16 @@
  * Date: 3/21/15
  * Time: 9:31 AM
  */
+$menuCatSearch = getMenuListArray('left-side');
+$menuListHTML = '';
+if (!empty($menuCatSearch)) {
+    $menuListHTML = '<ul class="dropdown-menu inner selectpicker" role="menu">';
+    //$menuListHTML .= '<li rel="0" class="selected"><a tabindex="0" class="" style=""><span class="text">'.$menuCatSearch['menu_name'].'</span></a></li>';
+    for ($idx=0; $idx<count($menuCatSearch[items]); $idx++) {
+        $menuListHTML .= '<li rel="'.($idx+1).'"><a tabindex="0"><span class="text">'.$menuCatSearch[items][$idx]['title'].'</span></a></li>';
+    }
+    $menuListHTML .= '</ul>';
+}
 ?>
 <form id="search_mini_form" action="/" method="get">
     <div class="form-search">
@@ -21,11 +31,14 @@
 <!--                    <option value="8">Wedding</option>-->
 <!--                </select>-->
                 <div class="btn-group bootstrap-select">
-                    <button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" data-id="cat" title="Categories">
-                        <span class="filter-option pull-left">Categories</span>&nbsp;<span class="caret"></span>
+                    <button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" data-id="cat" title="<?php echo $menuCatSearch['menu_name'];?>">
+                        <span class="filter-option pull-left"><?php echo $menuCatSearch['menu_name'];?></span>&nbsp;<span class="caret"></span>
                     </button>
                     <div class="dropdown-menu open">
-                        <ul class="dropdown-menu inner selectpicker" role="menu">
+                        <?php
+                        echo $menuListHTML;
+                        ?>
+                        <!--<ul class="dropdown-menu inner selectpicker" role="menu">
                             <li rel="0" class="selected"><a tabindex="0" class="" style=""><span class="text">Categories</span></a>
                             </li>
                             <li rel="1"><a tabindex="0" class="" style=""><span class="text">Bracelets2</span></a>
@@ -40,7 +53,7 @@
                             </li>
                             <li rel="6"><a tabindex="0" class="" style=""><span class="text">Wedding</span></a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
             </div>

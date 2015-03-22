@@ -1,5 +1,29 @@
 <?php
-get_header(); ?>
+get_header();
+$menuLeftSide = getMenuListArray('left-side');
+$menuLeftSideHTML = '';
+if (!empty($menuLeftSide)) {
+    $menuLeftSideHTML = '<div id="pt_vmegamenu" class="pt_vmegamenu">';
+    for ($idx=0; $idx<count($menuLeftSide[items]); $idx++) {
+        $class = 'pt_menu';
+        if ( $idx==0 ) {
+            $class .= ' first';
+        }
+        elseif ( $idx==0 ) {
+            $class .= ' last';
+        }
+        $menuLeftSideHTML .= '<div class="'.$class.'">
+                                <div class="parentMenu">
+                                    <a href="'.$menuLeftSide['items'][$idx]['url'].'">
+                                        <span>'.$menuLeftSide['items'][$idx]['title'].'</span>
+                                    </a>
+                                </div>
+                            </div>';
+    }
+    $menuLeftSideHTML .= '<div class="clearBoth"></div></div>';
+}
+
+?>
     <div class="main-container col2-left-layout">
         <div class="container">
             <div class="container-inner">
@@ -8,52 +32,10 @@ get_header(); ?>
                         <div class="col-left sidebar col-xs-12 col-sm-3">
                             <div class="navleft-container visible-lg visible-md">
                                 <div class="megamenu-title"><h2>Category</h2></div>
-                                <div id="pt_vmegamenu" class="pt_vmegamenu">
+<?php
+echo $menuLeftSideHTML;
+?>
 
-                                    <div class="pt_menu first">
-                                        <div class="parentMenu">
-                                            <a href="">
-                                                <span>Bracelets</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="pt_menu">
-                                        <div class="parentMenu">
-                                            <a href="">
-                                                <span>Earrings</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="pt_menu">
-                                        <div class="parentMenu">
-                                            <a href="">
-                                                <span>Necklaces</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="pt_menu">
-                                        <div class="parentMenu">
-                                            <a href="">
-                                                <span>Rings</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="pt_menu">
-                                        <div class="parentMenu">
-                                            <a href="">
-                                                <span>Watches</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="pt_menu last">
-                                        <div class="parentMenu">
-                                            <a href="">
-                                                <span>Wedding</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="clearBoth"></div>
-                                </div>
                             </div>
 
 

@@ -6,7 +6,7 @@
  * Time: 10:27 AM
  */
 
-if ( ! function_exists( 'getMenuList' ) ) :
+if ( ! function_exists('getMenu') ) :
 /**
  * @param string    $menuSlug  Menu slug in location
  * @param array     $classes    The classes used in ul, li. Example
@@ -18,7 +18,7 @@ if ( ! function_exists( 'getMenuList' ) ) :
  *                                  );
  * @return array   $menuList   List of menu in html
  */
-function getMenuList( $menuSlug, $classes = array() , $menuId = '' ) {
+function getMenu( $menuSlug, $classes = array() , $menuId = '' ) {
 
     $result = array();
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menuSlug ] ) ) {
@@ -50,6 +50,35 @@ function getMenuList( $menuSlug, $classes = array() , $menuId = '' ) {
         $result['menu_list'] .= '</ul>';
     }
 
+    return $result;
+}
+endif;
+
+if ( ! function_exists( 'getMenuListArray' ) ) :
+    /**
+     * @param string $menuSlug
+     * @return array
+     */
+    function getMenuListArray($menuSlug) {
+
+    $result = array();
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menuSlug ] ) ) {
+        $menu = wp_get_nav_menu_object( $locations[ $menuSlug ] );
+
+        $menuItems = wp_get_nav_menu_items($menu->term_id);
+        $result['menu_name'] = $menu->name;
+
+        $result['items'] = array();
+        foreach ( (array) $menuItems as $key => $menuItem ) {
+            $item = array(
+                'id' => $menuItem->ID,
+                'title' => $menuItem->title,
+                'url' => $menuItem->url,
+                'attr_title' => $menuItem->attr_title,
+            );
+            array_push($result['items'], $item);
+        }
+    }
     return $result;
 }
 endif;

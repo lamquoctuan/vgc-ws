@@ -26,14 +26,14 @@
                             <p class="welcome-msg">Welcome to Vancouver Gold for Cash!</p>
                         </div>
 <?php
-$classes = array(
+$classesTopRight = array(
     'ul' => 'links',
     'li_first' => 'first',
     'li_last' => 'last'
 );
-$menuTopRight = getMenuList('top-nav-right', $classes);
-$menuMain = getMenuList('primary');
-$menuLeftSide = getMenuList('left-side');
+$menuTopRight = getMenu('top-nav-right', $classesTopRight);
+$menuMain = getMenu('primary');
+$menuLeftSide = getMenuListArray('left-side');
 ?>
                         <div class="col-md-2 col-sms12">
                             <div class="special-offer"><a href="">Special Offer</a></div>
@@ -118,10 +118,26 @@ $menuLeftSide = getMenuList('left-side');
                             </a>
                             <span class="brand navbar-brand">Categories</span>
                         </div>
+<?php
+$menuLeftSideHTML = '';
+if (!empty($menuLeftSide)) {
+    $menuLeftSideHTML = '<ul id="ma-mobilemenu" class="mobilemenu nav-collapse collapse">';
+    for ($idx=0; $idx<count($menuLeftSide[items]); $idx++) {
+        $class = 'level0 nav-'.($idx+1).' level-top '.(($idx==0?'first ':'')).'parent';
+        $menuLeftSideHTML .= '<li class="'.$class.'">
+                                <a href="'.$menuLeftSide[items][$idx]['url'].'" class="level-top">
+                                    <span>'.$menuLeftSide[items][$idx]['title'].'</span>
+                                </a>
+                            </li>';
+    }
+    $menuLeftSideHTML .= '</ul>';
+}
+echo $menuLeftSideHTML;
+?><!--
                         <ul id="ma-mobilemenu" class="mobilemenu nav-collapse collapse">
                             <li class="level0 nav-1 level-top first parent">
                                 <a href="" class="level-top">
-                                    <span>Bracelets</span>
+                                    <span>Bracelets1</span>
                                 </a>
                             </li>
                             <li class="level0 nav-2 level-top parent">
@@ -149,7 +165,7 @@ $menuLeftSide = getMenuList('left-side');
                                     <span>Wedding</span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
             </div>

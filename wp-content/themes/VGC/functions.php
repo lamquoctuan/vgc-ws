@@ -163,8 +163,9 @@ if ( ! function_exists( 'vgc_enqueue_scripts' ) ) :
      * @since VGC 1.0
      */
     function vgc_enqueue_scripts() {
-        wp_enqueue_script( 'vgc-jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '20150320', false );
-        wp_enqueue_script( 'vgc-bootstrap', TEMP_URI . '/js/bootstrap.js', array(), '20150320', false );
+        wp_enqueue_script( 'vgc-jquery-js', TEMP_URI . '/js/jquery/1.11.2/jquery.min.js', array(), '20150320', false );
+        wp_enqueue_script( 'vgc-bootstrap', TEMP_URI . '/js/bootstrap.js', array('vgc-jquery-js'), '20150320', false );
+        wp_enqueue_script( 'vgc-bootstrap-select.min-js', TEMP_URI . '/js/bootstrap-select.min.js', array('vgc-jquery-js'), '20150320', false );
         wp_enqueue_script( 'vgc-prototype-js', TEMP_URI . '/js/prototype.js', array('vgc-jquery-js'), '20150320', false );
         wp_enqueue_script( 'vgc-validation-js', TEMP_URI . '/js/validation.js', array(), '20150320', false );
         wp_enqueue_script( 'vgc-effects-js', TEMP_URI . '/js/effects.js', array(), '20150320', false );
@@ -174,18 +175,17 @@ if ( ! function_exists( 'vgc_enqueue_scripts' ) ) :
         wp_enqueue_script( 'vgc-flexslider-js', TEMP_URI . '/js/ma.flexslider.js', array(), '20150320', false );
         wp_enqueue_script( 'vgc-sequence-js', TEMP_URI . '/js/jquery.sequence-min.js', array('vgc-slide-js', 'vgc-flexslider-js'), '20150320', false );
         wp_enqueue_script( 'vgc-custommenu-js', TEMP_URI . '/js/custommenu.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-ccard-js', TEMP_URI . '/js/ccard.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-builder-js', TEMP_URI . '/js/builder.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-dragdrop-js', TEMP_URI . '/js/dragdrop.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-slider-js', TEMP_URI . '/js/slider.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-form-js', TEMP_URI . '/js/form.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-menu-js', TEMP_URI . '/js/menu.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-translate-js', TEMP_URI . '/js/translate.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-cookies-js', TEMP_URI . '/js/cookies.js', array(), '20150320', false );
-        wp_enqueue_script( 'vgc-bootstrap-select.min-js', TEMP_URI . '/js/bootstrap-select.min.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-ccard-js', TEMP_URI . '/js/ccard.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-builder-js', TEMP_URI . '/js/builder.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-dragdrop-js', TEMP_URI . '/js/dragdrop.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-slider-js', TEMP_URI . '/js/slider.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-form-js', TEMP_URI . '/js/form.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-menu-js', TEMP_URI . '/js/menu.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-translate-js', TEMP_URI . '/js/translate.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-cookies-js', TEMP_URI . '/js/cookies.js', array(), '20150320', false );
     //    wp_enqueue_script( 'vgc-jquery-ui-js', TEMP_URI . '/js/jquery-ui.js', array(), '20150320', false );
     //    wp_enqueue_script( 'vgc-bootstrap-tooltip-js', TEMP_URI . '/js/bootstrap-tooltip.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-ma.mobilemenu-js', TEMP_URI . '/js/ma.mobilemenu.js', array(), '20150320', false );
+        wp_enqueue_script( 'vgc-ma.mobilemenu-js', TEMP_URI . '/js/ma.mobilemenu.js', array(), '20150320', false );
     //    wp_enqueue_script( 'vgc-ma.menu.effect-js', TEMP_URI . '/js/ma.menu.effect.js', array(), '20150320', false );
     //    wp_enqueue_script( 'vgc-backtotop-js', TEMP_URI . '/js/backtotop.js', array(), '20150320', false );
     //    wp_enqueue_script( 'vgc-jquery.fancybox-js', TEMP_URI . '/js/jquery.fancybox.js', array(), '20150320', false );
