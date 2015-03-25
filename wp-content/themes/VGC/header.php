@@ -132,12 +132,12 @@ if (!empty($menuLeftSide)) {
     }
     $menuLeftSideHTML .= '</ul>';
 }
-echo $menuLeftSideHTML;
-?><!--
+//echo $menuLeftSideHTML;
+?>
                         <ul id="ma-mobilemenu" class="mobilemenu nav-collapse collapse">
                             <li class="level0 nav-1 level-top first parent">
                                 <a href="" class="level-top">
-                                    <span>Bracelets1</span>
+                                    <span>Bracelets</span>
                                 </a>
                             </li>
                             <li class="level0 nav-2 level-top parent">
@@ -165,7 +165,7 @@ echo $menuLeftSideHTML;
                                     <span>Wedding</span>
                                 </a>
                             </li>
-                        </ul>-->
+                        </ul>
                     </div>
                 </div>
             </div>
