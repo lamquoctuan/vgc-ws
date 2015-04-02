@@ -78,18 +78,18 @@ if ( ! function_exists( 'vgc_fonts_url' ) ) :
         $subsets   = 'latin,latin-ext';
 
         /* translators: If there are characters in your language that are not supported by Titillium Web, translate this to 'off'. Do not translate into your own language. */
-        if ( 'off' !== _x( 'on', 'Titillium Web font: on or off', 'vgc' ) ) {
-            $fonts[] = 'Titillium Web:400,300,300italic,400italic,600,600italic,700,700italic';
+        // if ( 'off' !== _x( 'on', 'Titillium Web font: on or off', 'vgc' ) ) {
+        //     $fonts[] = 'Titillium Web:400,300,300italic,400italic,600,600italic,700,700italic';
+        // }
+
+        /* translators: If there are characters in your language that are not supported by Sacramento, translate this to 'off'. Do not translate into your own language. */
+        if ( 'off' !== _x( 'on', 'Sacramento font: on or off', 'vgc' ) ) {
+            $fonts[] = 'Sacramento:400italic,700italic,400,700';
         }
 
-        /* translators: If there are characters in your language that are not supported by Noto Serif, translate this to 'off'. Do not translate into your own language. */
-        if ( 'off' !== _x( 'on', 'Noto Serif font: on or off', 'vgc' ) ) {
-            $fonts[] = 'Noto Serif:400italic,700italic,400,700';
-        }
-
-        /* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-        if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'vgc' ) ) {
-            $fonts[] = 'Inconsolata:400,700';
+        /* translators: If there are characters in your language that are not supported by Ubuntu, translate this to 'off'. Do not translate into your own language. */
+        if ( 'off' !== _x( 'on', 'Ubuntu font: on or off', 'vgc' ) ) {
+            $fonts[] = 'Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic';
         }
 
         /* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
@@ -256,13 +256,14 @@ function product_init() {
 add_action( 'init', 'product_init' );
 
 //Debug area
-add_action('wp_head', 'display_template');
-function display_template() {
-    global $template;
-    $filename = basename($template);
-    echo '<strong>'.$filename.'</strong>';
+if ( WP_DEBUG ) {
+    add_action('wp_head', 'display_template');
+    function display_template() {
+        global $template;
+        $filename = basename($template);
+        echo '<script>console.log("'.$filename.'");</script>';
+    }
 }
-
 
 add_action( 'init', 'codex_book_init' );
 /**

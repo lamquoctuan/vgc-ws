@@ -3,14 +3,14 @@
 	-webkit-border-radius: 4px 4px 0 0;
 	-moz-border-radius: 4px 4px 0 0;
 	border-radius: 4px 4px 0 0;
-	behavior: url(http://www.plazathemes.com/demo/ma_sagitta/skin/frontend/default/ma_sagitta/css/css3.htc);
+	behavior: url(//www.plazathemes.com/demo/ma_sagitta/skin/frontend/default/ma_sagitta/css/css3.htc);
 	position: relative;
 }
 .mobilemenu>li.last {
 	-webkit-border-radius:0 0 4px 4px;
 	-moz-border-radius: 0 0 4px 4px;
 	border-radius: 0 0 4px 4px;
-	behavior: url(http://www.plazathemes.com/demo/ma_sagitta/skin/frontend/default/ma_sagitta/css/css3.htc);
+	behavior: url(//www.plazathemes.com/demo/ma_sagitta/skin/frontend/default/ma_sagitta/css/css3.htc);
 	position: relative;
 }
 #Example_F {
@@ -22,7 +22,7 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    behavior: url(http://www.plazathemes.com/demo/ma_sagitta/skin/frontend/default/ma_sagitta/css/css3.htc);
+    behavior: url(//www.plazathemes.com/demo/ma_sagitta/skin/frontend/default/ma_sagitta/css/css3.htc);
 }
 
 
@@ -57,7 +57,7 @@ a:hover,.drop-lang li a:hover,.drop-currency li a:hover,.header .links a:hover{
 .pager .pages a,.product-view .email-friend a,
 .pt_custommenu .itemSubMenu h4.level2, .pt_custommenu .itemSubMenu a.level2, .pt_custommenu .itemSubMenu h4.level3, .pt_custommenu .itemSubMenu a.level3, .pt_custommenu .itemMenu a.level1.nochild,
 button.button span,.bx-wrapper .bx-controls a,.ma-mostview-products .item .label-pro-sale,
-.currency-language a,.top-link ul.links li a,.pt_custommenu div.pt_menu.act a, .pt_custommenu div.pt_menu.active .parentMenu a,#pt_menu_home a:hover,#pt_menu_home.act a,.pt_custommenu div.pt_menu .parentMenu span.block-title:hover,.categorytab-slider .item .label-pro-new,
+.top-link ul.links li a,.pt_custommenu div.pt_menu.act a, .pt_custommenu div.pt_menu.active .parentMenu a,#pt_menu_home a:hover,#pt_menu_home.act a,.pt_custommenu div.pt_menu .parentMenu span.block-title:hover,.categorytab-slider .item .label-pro-new,
 .categorytab-slider .item .label-pro-sale,.ma-mostview-products .item .label-pro-new,.category-products .item .label-pro-sale,.category-products .item .label-pro-new,
 .drop-lang .sub-lang li a,.drop-currency .sub-currency li a,.wrapper_box #shopping_cart, .wrapper_box #continue_shopping,#back-top{
     -moz-transition: all 0.1s ease-in-out 0s;
@@ -66,7 +66,7 @@ button.button span,.bx-wrapper .bx-controls a,.ma-mostview-products .item .label
 .footer-icon a:hover,button.btn-cart:hover span,.link-wishlist:hover,.link-compare:hover,.block-tags .block-content a:hover,.products-grid .actions .button:hover span,
 .featuredproductslider-item .actions .button:hover span,.pager .view-mode strong.grid, .pager .view-mode a.grid:hover
 ,.pager .view-mode a.list,.pager .view-mode strong.list, .pager .view-mode a.list:hover,.pager .view-mode a.grid,
-button.button:hover span,.pager .pages a:hover,.product-view .email-friend a:hover,.bx-wrapper .bx-controls a:hover,.currency-language a:hover,
+button.button:hover span,.pager .pages a:hover,.product-view .email-friend a:hover,.bx-wrapper .bx-controls a:hover,
 .top-link ul.links li a:hover,.pt_vmegamenu div.pt_menu .parentMenu span.block-title:hover,
 .pt_vmegamenu div.pt_menu .parentMenu a:hover,.categorytab-slider .item:hover .label-pro-new,.categorytab-slider .item:hover .label-pro-sale,
 .pt_custommenu div.pt_menu .parentMenu a:hover,.ma-mostview-products .item:hover .label-pro-sale,.ma-mostview-products .item:hover .label-pro-new,
@@ -95,13 +95,6 @@ button.button:hover span,.pager .pages a:hover,.product-view .email-friend a:hov
     -o-transform: scale(0.95);
 }
 
-.static-left .google {
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out;
-}
-.static-left .google:hover{
-    -moz-transition: all 0.3s ease 0s;
-}
 #sequence .controls{
     -moz-transition: bottom 0.3s ease-in-out 0s;
     transition: bottom 0.3s ease-in-out;

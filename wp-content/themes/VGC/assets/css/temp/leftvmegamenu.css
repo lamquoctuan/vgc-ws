@@ -53,15 +53,10 @@
     text-decoration: none;
     display:block;
     line-height: 21px;
-    padding: 18px 30px 18px 27px;
+    padding: 10px 30px 10px 27px;
     border-left: 4px solid #fff;
-    font-size: 16px;
-    color: #333333;
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 600;
-    /*background:url("../images/bg-left-menu.png") no-repeat 90% 50% #fff;*/
-    text-transform: uppercase;
-    
+    font-size: 14px;
+    color: #282726;
 }
 
 
@@ -69,7 +64,7 @@
 .custom-menu-right { float: left; margin: 0;}
 .pt_vmegamenu .column.blockright { width: 150px !important; }
 .menu-right-title {
-    background: url("../../images/bg-bottom1-title.png") repeat-x left bottom;
+    background: url("../images/bg-bottom1-title.png") repeat-x left bottom;
     float: left;
     margin: 0 0 20px 0;
     width: 100%;
@@ -105,7 +100,7 @@
 }
 .pt_vmegamenu .itemMenu h4.level1,
 .pt_vmegamenu .itemMenu a.level1{
-    background: url("../../images/bg-bottom1-title.png") repeat-x scroll left bottom;
+    background: url("../images/bg-bottom1-title.png") repeat-x scroll left bottom;
     color: #777777;
     display: inline-block;
     font-size: 16px;

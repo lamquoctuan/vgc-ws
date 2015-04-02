@@ -22,7 +22,7 @@ if (!empty($menuCatSearch)) {
         <div class="box-select">
             <div class="header-select">
                 <select class="selectpicker" id="cat" name="cat" >
-                    <option value="">Categories</option>
+                    <option value="-1">Categories</option>
                     <option value="3">Bracelets</option>
                     <option value="4">Earrings</option>
                     <option value="5">Necklaces</option>
