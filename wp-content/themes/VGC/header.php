@@ -59,7 +59,7 @@ $menuLeftSide = getMenuListArray('left-side');
                     <div class="header-content">
                         <div class="row">
                             <div class="col-xs-12 col-md-3 col-sm-12">
-                                <a href="" title="Vancouver Gold for Cash" class="logo"><strong>Vancouver Gold for Cash</strong><img src="<?php echo TEMP_URI;?>/images/logo-orange.png" alt="Vancouver Gold for Cash"></a>
+                                <a href="" title="Vancouver Gold for Cash" class="logo"><strong>Vancouver Gold for Cash</strong><img src="<?php echo TEMP_URI;?>/assets/images/logo-orange.png" alt="Vancouver Gold for Cash"></a>
                             </div>
                             <div class="col-xs-12 col-md-6 col-sm-12">
                                 <div class="header-box">

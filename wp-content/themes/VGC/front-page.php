@@ -48,7 +48,7 @@ echo $menuLeftSideHTML;
                                     <ul class="products-grid  first last odd">
                                         <li class="item first">
                                             <a href="#" title="Fusce aliquam" class="product-image">
-                                                <img src="<?php echo TEMP_URI;?>/images/best/1.jpg" width="500" height="500" alt="Jewelry Name">
+                                                <img src="<?php echo TEMP_URI;?>/assets/images/best/1.jpg" width="500" height="500" alt="Jewelry Name">
                                             </a>
                                             <div class="box-feature">
                                                 <h2 class="product-name"><a href="" title="Jewelry Name">Jewelry Name</a></h2>
@@ -76,7 +76,7 @@ echo $menuLeftSideHTML;
                                         <!--  -->
                                         <li class="item">
                                             <a href="#" title="Proin lectus ipsum" class="product-image">
-                                                <img src="<?php echo TEMP_URI;?>/images/best/2.jpg" width="500" height="500" alt="Jewelry Name">
+                                                <img src="<?php echo TEMP_URI;?>/assets/images/best/2.jpg" width="500" height="500" alt="Jewelry Name">
                                             </a>
                                             <div class="box-feature">
                                                 <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>
@@ -105,7 +105,7 @@ echo $menuLeftSideHTML;
                                         <!--  -->
                                         <li class="item last">
                                             <a href="#" title="Quisque in arcu" class="product-image">
-                                                <img src="<?php echo TEMP_URI;?>/images/best/3.jpg" width="500" height="500" alt="Jewelry Name">
+                                                <img src="<?php echo TEMP_URI;?>/assets/images/best/3.jpg" width="500" height="500" alt="Jewelry Name">
                                             </a>
                                             <div class="box-feature">
                                                 <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>
@@ -133,9 +133,9 @@ echo $menuLeftSideHTML;
                                         </li>
                                     </ul>
                                     <!--  -->
-                                    <script type="text/javascript">
-                                        decorateGeneric($$('ul.products-grid'), ['odd', 'even', 'first', 'last'])
-                                    </script>
+                                   <!-- <script type="text/javascript">
+                                        http://vgc.lnr.com/wp-content/themes/VGC/assets/images/banner8/bg2-banner8.jpg($$('ul.products-grid'), ['odd', 'even', 'first', 'last'])
+                                    </script>-->
                                 </div>
                                 <!-- end exist product -->
                             </div>
@@ -143,7 +143,7 @@ echo $menuLeftSideHTML;
                             <div class="ma-banner8-container">
                                 <div class="flexslider">
                                     <div class="ma-loading" style="display: none;"></div>
-                                    <script type="text/javascript">
+                                   <!-- <script type="text/javascript">
                                         $jq(window).load(function(){
                                             $jq('.ma-banner8-container .flexslider').flexslider({
                                                 slideshow: true,
@@ -163,18 +163,18 @@ echo $menuLeftSideHTML;
                                                 }
                                             });
                                         });
-                                    </script>
+                                    </script>-->
                                     <div class="flex-viewport" style="overflow: hidden; position: relative;">
                                         <ul class="slides" style="width: 1000%; -webkit-transition-duration: 0s; transition-duration: 0s; -webkit-transform: translate3d(-263px, 0px, 0px);">
                                             <li class="clone" style="width: 263px; float: left; display: block;">
-                                                <img src="<?php echo TEMP_URI;?>/images/banner8/bg2-banner8.jpg" alt="">
+                                                <img src="<?php echo TEMP_URI;?>/assets/images/banner8/bg2-banner8.jpg" alt="">
                                             </li>
 
                                             <li class="flex-active-slide" style="width: 263px; float: left; display: block;">
-                                                <img src="<?php echo TEMP_URI;?>/images/banner8/bg-banner8.jpg" alt="">
+                                                <img src="<?php echo TEMP_URI;?>/assets/images/banner8/bg-banner8.jpg" alt="">
                                             </li>
                                             <li class="" style="width: 263px; float: left; display: block;">
-                                                <img src="<?php echo TEMP_URI;?>/images/banner8/bg1-banner8.jpg" alt="">
+                                                <img src="<?php echo TEMP_URI;?>/assets/images/banner8/bg1-banner8.jpg" alt="">
                                             </li>
 
                                         </ul>
@@ -197,7 +197,7 @@ echo $menuLeftSideHTML;
                                             <div class="intro subtitle" style="">
                                                 Whether it opens up to reveal a solitaire engagement ring or keeps a wedding ring safe...</div>
 
-                                            <img class="slider-bg" src="<?php echo TEMP_URI;?>/images/bg1.jpg" alt="Image" style="">
+                                            <img class="slider-bg" src="<?php echo TEMP_URI;?>/assets/images/bg1.jpg" alt="Image" style="">
                                             <div class="link subtitle1" style="">
                                                 <a href="#">Shop now</a>
                                             </div>
@@ -208,7 +208,7 @@ echo $menuLeftSideHTML;
                                             <div class="intro-slider2 subtitle-slider2" style="">
                                                 Passion and Success</div>
 
-                                            <img class="slider-bg" src="<?php echo TEMP_URI;?>/images/bg2.jpg" alt="Image" style="">
+                                            <img class="slider-bg" src="<?php echo TEMP_URI;?>/assets/images/bg2.jpg" alt="Image" style="">
                                             <div class="link-slider2 subtitle-slider2" style="">
                                                 <a href="#">Shop now</a>
                                             </div>
@@ -219,7 +219,7 @@ echo $menuLeftSideHTML;
                                             <div class="intro-slider3 subtitle-slider3" style="">
                                                 Once in awhile, Right in the middle of an ordinary life, Love gives us a fairy tale.</div>
 
-                                            <img class="slider-bg" src="<?php echo TEMP_URI;?>/images/bg3.jpg" alt="Image" style="">
+                                            <img class="slider-bg" src="<?php echo TEMP_URI;?>/assets/images/bg3.jpg" alt="Image" style="">
                                             <div class="link-slider3 subtitle-slider3" style="">
                                                 <a href="#">Shop now</a>
                                             </div>
@@ -230,7 +230,7 @@ echo $menuLeftSideHTML;
                             <script type="text/javascript">
 
                                 //<![CDATA[
-                                $jq(document).ready(function(){
+                                $seq (document).ready(function(){
                                     //$jqstatus = $jq(".status");
                                     var options = {
                                         autoPlay: true,
@@ -251,9 +251,7 @@ echo $menuLeftSideHTML;
                                         }
                                     };
 
-                                    var sequence = $jq("#sequence").sequence(options).data("sequence");
-
-
+                                    var sequence = $seq("#sequence").sequence(options).data("sequence");
                                 });
                                 //]]>
 
@@ -277,7 +275,7 @@ echo $menuLeftSideHTML;
                                                                     <figure>
                                                                         <a href="#" title="Voluptas nulla" class="product-image">
                                                                             <div class="product-image">
-                                                                                <img src="<?php echo TEMP_URI;?>/images/new/1.jpg" width="500" height="500" alt="Jewelry Name">
+                                                                                <img src="<?php echo TEMP_URI;?>/assets/images/new/1.jpg" width="500" height="500" alt="Jewelry Name">
                                                                             </div>
                                                                         </a>
                                                                     </figure>
@@ -306,7 +304,7 @@ echo $menuLeftSideHTML;
                                                                     <figure>
                                                                         <a href="#" title="Jewelry Name" class="product-image">
                                                                             <div class="product-image">
-                                                                                <img src="<?php echo TEMP_URI;?>/images/new/2.jpg" width="500" height="500" alt="Jewelry Name">
+                                                                                <img src="<?php echo TEMP_URI;?>/assets/images/new/2.jpg" width="500" height="500" alt="Jewelry Name">
                                                                             </div>
                                                                         </a>
                                                                     </figure>
@@ -335,7 +333,7 @@ echo $menuLeftSideHTML;
                                                                     <figure>
                                                                         <a href="#" title="Voluptas nulla" class="product-image">
                                                                             <div class="product-image">
-                                                                                <img src="<?php echo TEMP_URI;?>/images/new/3.jpg" width="500" height="500" alt="Voluptas nulla">
+                                                                                <img src="<?php echo TEMP_URI;?>/assets/images/new/3.jpg" width="500" height="500" alt="Voluptas nulla">
                                                                             </div>
                                                                         </a>
                                                                     </figure>
@@ -364,7 +362,7 @@ echo $menuLeftSideHTML;
                                                                     <figure>
                                                                         <a href="#" title="Voluptas nulla" class="product-image">
                                                                             <div class="product-image">
-                                                                                <img src="<?php echo TEMP_URI;?>/images/new/4.jpg" width="500" height="500" alt="Jewelry Name">
+                                                                                <img src="<?php echo TEMP_URI;?>/assets/images/new/4.jpg" width="500" height="500" alt="Jewelry Name">
                                                                             </div>
                                                                         </a>
                                                                     </figure>
@@ -408,7 +406,7 @@ echo $menuLeftSideHTML;
                                                         <div class="item-inner">
 
                                                             <a href="#" title="Jewelry Name" class="product-image">
-                                                                <img src="<?php echo TEMP_URI;?>/images/most/1.jpg" alt="Jewelry Name">
+                                                                <img src="<?php echo TEMP_URI;?>/assets/images/most/1.jpg" alt="Jewelry Name">
                                                             </a>
                                                             <div class="box-item">
                                                                 <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>
@@ -439,7 +437,7 @@ echo $menuLeftSideHTML;
                                                         <div class="item-inner">
 
                                                             <a href="#" title="Jewelry Name" class="product-image">
-                                                                <img src="<?php echo TEMP_URI;?>/images/most/2.jpg" alt="Jewelry Name">
+                                                                <img src="<?php echo TEMP_URI;?>/assets/images/most/2.jpg" alt="Jewelry Name">
                                                             </a>
                                                             <div class="box-item">
                                                                 <h2 class="product-name">
@@ -472,7 +470,7 @@ echo $menuLeftSideHTML;
                                                         <div class="item-inner">
 
                                                             <a href="#" class="product-image">
-                                                                <img src="<?php echo TEMP_URI;?>/images/most/3.jpg" alt="Jewelry Name">
+                                                                <img src="<?php echo TEMP_URI;?>/assets/images/most/3.jpg" alt="Jewelry Name">
                                                             </a>
                                                             <div class="box-item">
                                                                 <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>
@@ -508,7 +506,7 @@ echo $menuLeftSideHTML;
                                                         <div class="item-inner">
 
                                                             <a href="#" title="Jewelry Name" class="product-image">
-                                                                <img src="<?php echo TEMP_URI;?>/images/most/4.jpg" alt="Jewelry Name">
+                                                                <img src="<?php echo TEMP_URI;?>/assets/images/most/4.jpg" alt="Jewelry Name">
                                                             </a>
                                                             <div class="box-item">
                                                                 <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>
@@ -539,7 +537,7 @@ echo $menuLeftSideHTML;
                                                         <div class="item-inner">
 
                                                             <a href="#" title="Jewelry Name" class="product-image">
-                                                                <img src="<?php echo TEMP_URI;?>/images/most/5.jpg" alt="Jewelry Name">
+                                                                <img src="<?php echo TEMP_URI;?>/assets/images/most/5.jpg" alt="Jewelry Name">
                                                             </a>
                                                             <div class="box-item">
                                                                 <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>
@@ -570,7 +568,7 @@ echo $menuLeftSideHTML;
                                                         <div class="item-inner">
 
                                                             <a href="#" title="Jewelry Name" class="product-image">
-                                                                <img src="<?php echo TEMP_URI;?>/images/most/6.jpg" alt="Jewelry Name">
+                                                                <img src="<?php echo TEMP_URI;?>/assets/images/most/6.jpg" alt="Jewelry Name">
                                                             </a>
                                                             <div class="box-item">
                                                                 <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>

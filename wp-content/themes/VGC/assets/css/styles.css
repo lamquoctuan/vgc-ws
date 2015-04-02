@@ -92,7 +92,7 @@ ul,ol         { list-style:none; margin: 0;}
 .no-padding   { padding:0 !important; }
 .no-bg        { background:none !important; }
 
-// Margins
+/*Margins*/
 .m0                     { margin: 0; }
 .ml1                    { margin-left: 1px; }
 .mt1                    { margin-top: 1px; }
@@ -131,7 +131,7 @@ ul,ol         { list-style:none; margin: 0;}
 .mr-50                  { margin-right: -50px; }
 .mb-50                  { margin-bottom: -50px; }
 
-// Paddings
+/*Paddings*/
 .p0                     { padding: 0; }
 .pl1                    { padding-left: 1px; }
 .pt1                    { padding-top: 1px; }
@@ -597,14 +597,14 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 }
 
 .pager .pages .previous {
-    background: url("../images/pager_arrow_left.png") no-repeat 0 0 #f1f1f1;
+    /*background: url("../images/pager_arrow_left.png") no-repeat 0 0 #f1f1f1;*/
     transition: all 0s ease-in-out;
     height: 30px;
     width: 30px;
     text-indent: -9999px;
 }
 .pager .pages .previous:hover {
-    background: url("../images/pager_arrow_left.png") no-repeat 0 100% #0ec300;
+    /*background: url("../images/pager_arrow_left.png") no-repeat 0 100% #0ec300;*/
     transition: all 0s ease-in-out;
 }
 
@@ -619,7 +619,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
     width: 30px;
     background: #0ec300;
 }
-}
+
 .pager .pages a.next, .pager .pages a.previous {text-transform: lowercase; background:none; color: #666;  font-size: 14px; }
 .pager .pages a.next:hover, .pager .pages a.previous:hover { color: #00A5E8; }
 
@@ -4998,32 +4998,32 @@ ol.commentlist {
 /*Modunl=========================================================*/
 
 .link.subtitle1 a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;
+    /*background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;*/
     border-bottom: 3px solid #818c95;
 }
 .link.subtitle1 a:hover {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #0ec300;
+    /*background:url("../images/icon-subtitle.png") no-repeat 80% 53% #0ec300;*/
     border-bottom: 3px solid #0ea700;
 }
 .animate-in .link a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;
+    /*background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;*/
 }
 .animate-out .link a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;
+    /*background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;*/
 }
 .link-slider2.subtitle-slider2 a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #d34b2d;
+    /*background:url("../images/icon-subtitle.png") no-repeat 80% 53% #d34b2d;*/
     border-bottom: 3px solid #b93c20;
 }
 .link-slider2.subtitle-slider2 a:hover {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;
+    /*background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;*/
     border-bottom: 3px solid #818C95;
 }
 .animate-in .link-slider2 a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #d34b2d;
+    /*background:url("../images/icon-subtitle.png") no-repeat 80% 53% #d34b2d;*/
 }
 .animate-out .link-slider2 a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #b93c20;
+    /*background:url("../images/icon-subtitle.png") no-repeat 80% 53% #b93c20;*/
 }
 ul.tabs li:hover {
 	color: #0ec300;

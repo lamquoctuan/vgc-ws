@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Category pages
+ * The template for displaying Taxonomy pages
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  */
@@ -24,6 +24,7 @@ get_header(); ?>
                                 endif;
                                 ?>
                             </header><!-- .archive-header -->
+                            Product taxonomy
                             <?php
                             // Start the Loop.
                             while ( have_posts() ) : the_post();

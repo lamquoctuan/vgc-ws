@@ -129,30 +129,39 @@ if ( ! function_exists( 'vgc_enqueue_styles' ) ) :
         // Add ..., used in the main stylesheet.
         // Load our main stylesheet.
         wp_enqueue_style( 'vgc-core', get_stylesheet_uri(), false );
-        wp_enqueue_style( 'vgc-bootstrap', TEMP_URI . '/css/bootstrap.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-styles', TEMP_URI . '/css/styles.css', array( 'vgc-core' ), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-style', TEMP_URI . '/css/style.css', array( 'vgc-core' ), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-bootstrap-select.min', TEMP_URI . '/css/bootstrap-select.min.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-bootstrap-theme', TEMP_URI . '/css/bootstrap-theme.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-widgets', TEMP_URI . '/css/widgets.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-custommenu', TEMP_URI . '/css/custommenu.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-effect', TEMP_URI . '/css/effect.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-ma.onsaleslider', TEMP_URI . '/css/ma.onsaleslider.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-categorytabs', TEMP_URI . '/css/categorytabs.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-categorytabsliders', TEMP_URI . '/css/categorytabsliders.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-searchbycategory', TEMP_URI . '/css/searchbycategory.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-ma.cltool', TEMP_URI . '/css/ma.cltool.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-ma.upsellslider', TEMP_URI . '/css/ma.upsellslider.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-leftvmegamenu', TEMP_URI . '/css/leftvmegamenu.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-ma.banner8', TEMP_URI . '/css/ma.banner8.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-bannersequence', TEMP_URI . '/css/bannersequence.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-ma.newslider', TEMP_URI . '/css/ma.newslider.css', array(), '20150320' , 'all');
-        wp_enqueue_style( 'vgc-ajax_cart_super', TEMP_URI . '/css/ajax_cart_super.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-jquery-ui', TEMP_URI . '/css/jquery-ui.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-jquery.fancybox', TEMP_URI . '/css/jquery.fancybox.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-bestsellervertscroller', TEMP_URI . '/css/bestsellervertscroller.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-ma.brandslider.css', TEMP_URI . '/css/ma.brandslider.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-print.css', TEMP_URI . '/css/print.css', array(), '20150320' , 'print');
+
+        //Twitter bootstrap
+        wp_enqueue_style( 'vgc-bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array(), '20150320' , 'all');
+        //Bootstrap select plugin
+        wp_enqueue_style( 'vgc-bootstrap-select.min', TEMP_URI . '/assets/bootstrap-select/css/bootstrap-select.min.css', array(), '20150320' , 'all');
+
+        wp_enqueue_style( 'vgc-style', TEMP_URI . '/assets/css/vgc.css', array( 'vgc-core' ), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-style', TEMP_URI . '/assets/css/style.css', array( 'vgc-core' ), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-styles', TEMP_URI . '/assets/css/styles.css', array( 'vgc-core' ), '20150320' , 'all');
+
+        //    wp_enqueue_style( 'vgc-bootstrap-theme', TEMP_URI . '/assets/css/temp/bootstrap-theme.css', array(), '20150320' , 'all');
+    //    wp_enqueue_style( 'vgc-widgets', TEMP_URI . '/assets/css/temp/widgets.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-custommenu', TEMP_URI . '/assets/css/temp/custommenu.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-effect', TEMP_URI . '/assets/css/temp/effect.css', array(), '20150320' , 'all');
+    //    wp_enqueue_style( 'vgc-ma.onsaleslider', TEMP_URI . '/assets/css/temp/ma.onsaleslider.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-categorytabs', TEMP_URI . '/assets/css/temp/categorytabs.css', array(), '20150320' , 'all');
+    //    wp_enqueue_style( 'vgc-categorytabsliders', TEMP_URI . '/assets/css/temp/categorytabsliders.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-searchbycategory', TEMP_URI . '/assets/css/temp/searchbycategory.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-ma.cltool', TEMP_URI . '/assets/css/temp/ma.cltool.css', array(), '20150320' , 'all');
+    //    wp_enqueue_style( 'vgc-ma.upsellslider', TEMP_URI . '/assets/css/temp/ma.upsellslider.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-leftvmegamenu', TEMP_URI . '/assets/css/temp/leftvmegamenu.css', array(), '20150320' , 'all');
+//1        wp_enqueue_style( 'vgc-bannersequencener8', TEMP_URI . '/assets/css/temp/ma.banner8.css', array(), '20150320' , 'all');
+        //    wp_enqueue_style( 'vgc-ma.newslider', TEMP_URI . '/assets/css/temp/ma.newslider.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-ajax_cart_super', TEMP_URI . '/assets/css/temp/ajax_cart_super.css', array(), '20150320' , 'all');
+        //    wp_enqueue_style( 'vgc-jquery-ui', TEMP_URI . '/assets/css/temp/jquery-ui.css', array(), '20150320' , 'all');
+        //    wp_enqueue_style( 'vgc-jquery.fancybox', TEMP_URI . '/assets/css/temp/jquery.fancybox.css', array(), '20150320' , 'all');
+        //    wp_enqueue_style( 'vgc-bestsellervertscroller', TEMP_URI . '/assets/css/temp/bestsellervertscroller.css', array(), '20150320' , 'all');
+        //    wp_enqueue_style( 'vgc-ma.brandslider.css', TEMP_URI . '/assets/css/temp/ma.brandslider.css', array(), '20150320' , 'all');
+        //    wp_enqueue_style( 'vgc-print.css', TEMP_URI . '/assets/css/temp/print.css', array(), '20150320' , 'print');
+
+        //  Home banner sequence
+        if (is_home() || is_front_page())
+            wp_enqueue_style( 'vgc-bannersequence', TEMP_URI . '/assets/sequence/css/bannersequence.css', array(), '20150320' , 'all');
     }
 endif;
 
@@ -163,38 +172,46 @@ if ( ! function_exists( 'vgc_enqueue_scripts' ) ) :
      * @since VGC 1.0
      */
     function vgc_enqueue_scripts() {
-        wp_enqueue_script( 'vgc-jquery-js', TEMP_URI . '/js/jquery/1.11.2/jquery.min.js', array(), '20150320', false );
-        wp_enqueue_script( 'vgc-bootstrap', TEMP_URI . '/js/bootstrap.js', array('vgc-jquery-js'), '20150320', false );
-        wp_enqueue_script( 'vgc-bootstrap-select.min-js', TEMP_URI . '/js/bootstrap-select.min.js', array('vgc-jquery-js'), '20150320', false );
-        wp_enqueue_script( 'vgc-prototype-js', TEMP_URI . '/js/prototype.js', array('vgc-jquery-js'), '20150320', false );
-        wp_enqueue_script( 'vgc-validation-js', TEMP_URI . '/js/validation.js', array(), '20150320', false );
-        wp_enqueue_script( 'vgc-effects-js', TEMP_URI . '/js/effects.js', array(), '20150320', false );
-        wp_enqueue_script( 'vgc-controls-js', TEMP_URI . '/js/controls.js', array('vgc-prototype-js','vgc-effects-js'), '20150320', false );
-        wp_enqueue_script( 'vgc-js-js', TEMP_URI . '/js/js.js', array('vgc-prototype-js', 'vgc-validation-js', 'vgc-controls-js'), '20150320', false );
-        wp_enqueue_script( 'vgc-slide-js', TEMP_URI . '/js/ma.jq.slide.js', array(), '20150320', false );
-        wp_enqueue_script( 'vgc-flexslider-js', TEMP_URI . '/js/ma.flexslider.js', array(), '20150320', false );
-        wp_enqueue_script( 'vgc-sequence-js', TEMP_URI . '/js/jquery.sequence-min.js', array('vgc-slide-js', 'vgc-flexslider-js'), '20150320', false );
-        wp_enqueue_script( 'vgc-custommenu-js', TEMP_URI . '/js/custommenu.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-ccard-js', TEMP_URI . '/js/ccard.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-builder-js', TEMP_URI . '/js/builder.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-dragdrop-js', TEMP_URI . '/js/dragdrop.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-slider-js', TEMP_URI . '/js/slider.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-form-js', TEMP_URI . '/js/form.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-menu-js', TEMP_URI . '/js/menu.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-translate-js', TEMP_URI . '/js/translate.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-cookies-js', TEMP_URI . '/js/cookies.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-jquery-ui-js', TEMP_URI . '/js/jquery-ui.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-bootstrap-tooltip-js', TEMP_URI . '/js/bootstrap-tooltip.js', array(), '20150320', false );
-        wp_enqueue_script( 'vgc-ma.mobilemenu-js', TEMP_URI . '/js/ma.mobilemenu.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-ma.menu.effect-js', TEMP_URI . '/js/ma.menu.effect.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-backtotop-js', TEMP_URI . '/js/backtotop.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-jquery.fancybox-js', TEMP_URI . '/js/jquery.fancybox.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-likebox-js', TEMP_URI . '/js/likebox.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-ma.script.vert-js', TEMP_URI . '/js/ma.script.vert.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-ma.bxslider.min-js', TEMP_URI . '/js/ma.bxslider.min.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-colorpicker-js', TEMP_URI . '/js/colorpicker.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-jquery.cookie-js', TEMP_URI . '/js/jquery.cookie.js', array(), '20150320', false );
-    //    wp_enqueue_script( 'vgc-ma.nivo.js-js', TEMP_URI . '/js/ma.nivo.js.js', array(), '20150320', false );
+        wp_enqueue_script( 'vgc-jquery-js', TEMP_URI . '/assets/js/jquery/1.11.2/jquery.min.js', array(), '20150320', false );
+        wp_enqueue_script( 'vgc-main-js', TEMP_URI . '/assets/js/vgc.js', array('vgc-jquery-js'), '20150320', false );
+
+        //Twitter bootstrap
+        wp_enqueue_script( 'vgc-bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('vgc-jquery-js'), '20150320', false );
+        //Bootstrap select plugin
+        wp_enqueue_script( 'vgc-bootstrap-select.min-js', TEMP_URI . '/assets/bootstrap-select/js/bootstrap-select.min.js', array('vgc-jquery-js'), '20150320', false );
+
+        //  Home banner sequence
+        if (is_home() || is_front_page())
+            wp_enqueue_script( 'vgc-sequence-js', TEMP_URI . '/assets/sequence/js/jquery.sequence-min.js', array('vgc-main-js'), '20150320', false );
+
+//        wp_enqueue_script( 'vgc-prototype-js', TEMP_URI . '/assets/js/prototype.js', array('vgc-jquery-js'), '20150320', false );
+//        wp_enqueue_script( 'vgc-validation-js', TEMP_URI . '/assets/js/validation.js', array(), '20150320', false );
+//        wp_enqueue_script( 'vgc-effects-js', TEMP_URI . '/assets/js/effects.js', array(), '20150320', false );
+//        wp_enqueue_script( 'vgc-controls-js', TEMP_URI . '/assets/js/controls.js', array('vgc-prototype-js','vgc-effects-js'), '20150320', false );
+//        wp_enqueue_script( 'vgc-js-js', TEMP_URI . '/assets/js/js.js', array('vgc-prototype-js', 'vgc-validation-js', 'vgc-controls-js'), '20150320', false );
+//        wp_enqueue_script( 'vgc-slide-js', TEMP_URI . '/assets/js/ma.jq.slide.js', array(), '20150320', false );
+//        wp_enqueue_script( 'vgc-flexslider-js', TEMP_URI . '/assets/js/ma.flexslider.js', array(), '20150320', false );
+//        wp_enqueue_script( 'vgc-custommenu-js', TEMP_URI . '/assets/js/custommenu.js', array(), '20150320', false );
+//        wp_enqueue_script( 'vgc-ma.mobilemenu-js', TEMP_URI . '/assets/js/ma.mobilemenu.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-ccard-js', TEMP_URI . '/assets/js/ccard.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-builder-js', TEMP_URI . '/assets/js/builder.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-dragdrop-js', TEMP_URI . '/assets/js/dragdrop.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-slider-js', TEMP_URI . '/assets/js/slider.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-form-js', TEMP_URI . '/assets/js/form.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-menu-js', TEMP_URI . '/assets/js/menu.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-translate-js', TEMP_URI . '/assets/js/translate.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-cookies-js', TEMP_URI . '/assets/js/cookies.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-jquery-ui-js', TEMP_URI . '/assets/js/jquery-ui.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-bootstrap-tooltip-js', TEMP_URI . '/assets/js/bootstrap-tooltip.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-ma.menu.effect-js', TEMP_URI . '/assets/js/ma.menu.effect.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-backtotop-js', TEMP_URI . '/assets/js/backtotop.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-jquery.fancybox-js', TEMP_URI . '/assets/js/jquery.fancybox.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-likebox-js', TEMP_URI . '/assets/js/likebox.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-ma.script.vert-js', TEMP_URI . '/assets/js/ma.script.vert.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-ma.bxslider.min-js', TEMP_URI . '/assets/js/ma.bxslider.min.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-colorpicker-js', TEMP_URI . '/assets/js/colorpicker.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-jquery.cookie-js', TEMP_URI . '/assets/js/jquery.cookie.js', array(), '20150320', false );
+        //    wp_enqueue_script( 'vgc-ma.nivo.js-js', TEMP_URI . '/assets/js/ma.nivo.js.js', array(), '20150320', false );
     }
 endif;
 
@@ -208,3 +225,88 @@ add_action( 'wp_enqueue_scripts', 'vgc_enqueue_scripts' );
  **/
 
 require TEMP_DIR . '/inc/customizer.php';
+
+/**
+ * create a new Product List taxonomy
+ */
+function product_init() {
+    $labels = array(
+        'all_items' => __( 'All Product Categories' ),
+        'edit_item' => __( 'Edit Product Category' ),
+        'view_item' => __( 'View Product Category' ),
+        'update_item' => __( 'Update Product Category' ),
+        'add_new_item' => __( 'Add New Product Category' ),
+        'new_item_item' => __( 'New Product Category Name' ),
+        'not_found' => __( 'No product categories found.' )
+    );
+    register_taxonomy(
+        'product',
+        'page',
+        array(
+            'label' => __( 'Product Categories' ),
+            'labels' => $labels,
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+            'query_var', true,
+            'rewrite' => array( 'slug' => 'product' )
+        )
+    );
+}
+add_action( 'init', 'product_init' );
+
+//Debug area
+add_action('wp_head', 'display_template');
+function display_template() {
+    global $template;
+    $filename = basename($template);
+    echo '<strong>'.$filename.'</strong>';
+}
+
+
+add_action( 'init', 'codex_book_init' );
+/**
+ * Register a book post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function codex_book_init() {
+    $labels = array(
+        'name'               => _x( 'Books', 'post type general name', 'vgc' ),
+        'singular_name'      => _x( 'Book', 'post type singular name', 'vgc' ),
+        'menu_name'          => _x( 'Books', 'admin menu', 'vgc' ),
+        'name_admin_bar'     => _x( 'Book', 'add new on admin bar', 'vgc' ),
+        'add_new'            => _x( 'Add New', 'book', 'vgc' ),
+        'add_new_item'       => __( 'Add New Book', 'vgc' ),
+        'new_item'           => __( 'New Book', 'vgc' ),
+        'edit_item'          => __( 'Edit Book', 'vgc' ),
+        'view_item'          => __( 'View Book', 'vgc' ),
+        'all_items'          => __( 'All Books', 'vgc' ),
+        'search_items'       => __( 'Search Books', 'vgc' ),
+        'parent_item_colon'  => __( 'Parent Books:', 'vgc' ),
+        'not_found'          => __( 'No books found.', 'vgc' ),
+        'not_found_in_trash' => __( 'No books found in Trash.', 'vgc' )
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'book' ),
+        'has_archive'        => true,
+        'hierarchical'       => true,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+    );
+
+    register_post_type( 'book', $args );
+}
+
+function my_rewrite_flush() {
+    codex_book_init();
+    flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'my_rewrite_flush' );
