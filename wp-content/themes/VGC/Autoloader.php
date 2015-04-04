@@ -26,13 +26,13 @@ class Autoloader {
     }
 
     public function autoload() {
-        $this->loadFilesFromDir($this->topDir);
         $subDirs = $this->fetchSubdirs();
         if (count($subDirs) > 0) {
             foreach ($subDirs as $subDir) {
                 $this->loadFilesFromDir($subDir);
             }
         }
+        $this->loadFilesFromDir($this->topDir);
     }
 
     protected function fetchSubdirs($parent = null) {

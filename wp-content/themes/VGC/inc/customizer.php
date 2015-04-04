@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: tuanlam
- * Date: 3/21/15
- * Time: 10:27 AM
- */
 
 if ( ! function_exists('getMenu') ) :
 /**

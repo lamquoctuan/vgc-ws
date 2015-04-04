@@ -1,32 +1,13 @@
 <?php
-/**
- * create a new Product List taxonomy
- */
-// function product_init() {
-//     $labels = array(
-//         'all_items' => __( 'All Product Categories' ),
-//         'edit_item' => __( 'Edit Product Category' ),
-//         'view_item' => __( 'View Product Category' ),
-//         'update_item' => __( 'Update Product Category' ),
-//         'add_new_item' => __( 'Add New Product Category' ),
-//         'new_item_item' => __( 'New Product Category Name' ),
-//         'not_found' => __( 'No product categories found.' )
-//     );
-//     register_taxonomy(
-//         'product',
-//         'page',
-//         array(
-//             'label' => __( 'Product Categories' ),
-//             'labels' => $labels,
-//             'show_ui' => true,
-//             'show_admin_column' => true,
-//             'hierarchical' => true,
-//             'query_var', true,
-//             'rewrite' => array( 'slug' => 'product' )
-//         )
-//     );
-// }
-// add_action( 'init', 'product_init' );
+$taxSpecie = new \app\models\Taxonomy();
+$taxSpecie->setAttributes(array('name' => 'specie', 'object_type' => 'product', 'label' => 'Specie', 'label_plural' => 'Species'));
+$taxSpecie->addInit();
+$taxGenus = new \app\models\Taxonomy();
+$taxGenus->setAttributes(array('name' => 'genus', 'object_type' => 'product', 'label' => 'Genus', 'label_plural' => 'Genera'));
+$taxGenus->addInit();
+$taxBrand = new \app\models\Taxonomy();
+$taxBrand->setAttributes(array('name' => 'brand', 'object_type' => 'product', 'label' => 'Brand', 'label_plural' => 'Brands'));
+$taxBrand->addInit();
 
 add_action( 'init', 'product_init' );
 /**

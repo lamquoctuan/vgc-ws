@@ -1,15 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: tuanlam
- * Date: 4/3/15
- * Time: 10:10 AM
- */
-
-namespace vgc\models;
+namespace app\models;
 
 
-class Taxonomy extends \vgc\Model
+class Taxonomy
 {
     private $labelNames = array('all_items','edit_item','view_item','update_item','add_new_item','new_item_item','not_found');
 
@@ -57,10 +50,10 @@ class Taxonomy extends \vgc\Model
     }
     public function setAttributes($attributes = array())
     {
-        $this->name = \vgc\Utils::arrayGet('name',$attributes,'');
-        $this->label = \vgc\Utils::arrayGet('label',$attributes,ucfirst($this->name));
-        $this->labelPlural = \vgc\Utils::arrayGet('labels',$attributes,$this->label.'s');
-        $this->objectType = \vgc\Utils::arrayGet('object_type',$attributes,'');
+        $this->name = \app\helpers\Utils::arrayGet('name',$attributes,'');
+        $this->label = \app\helpers\Utils::arrayGet('label',$attributes,ucfirst($this->name));
+        $this->labelPlural = \app\helpers\Utils::arrayGet('label_plural',$attributes,$this->label.'s');
+        $this->objectType = \app\helpers\Utils::arrayGet('object_type',$attributes,'');
     }
     public function register()
     {
@@ -89,6 +82,6 @@ class Taxonomy extends \vgc\Model
 
     public function addInit()
     {
-        add_action('init', 'register');
+        add_action('init', array($this,'register'));
     }
 }
