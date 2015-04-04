@@ -224,6 +224,22 @@ add_action( 'wp_enqueue_scripts', 'vgc_enqueue_scripts' );
  *
  **/
 
-require TEMP_DIR . '/inc/customizer.php';
-require TEMP_DIR . '/inc/debug.php';
-require TEMP_DIR . '/inc/post_types.php';
+/**
+ * Autoload PHP scripts in the CHILD directory
+ */
+function autoload() {
+    require_once (TEMP_DIR . '/Autoloader.php');
+    $autoloader = new Autoloader();
+    $autoloader->autoload();
+}
+add_action ( 'vgc_init', 'autoload' );
+
+/**
+ * Activates default theme features.
+ */
+function vgc_theme_support() {
+    // * Turn on HTML5, responsive viewport & footer widgets if Genesis is active
+    add_theme_support ( 'html5' );
+}
+add_action ( 'vgc_init', 'vgc_theme_support' );
+do_action ('vgc_init');

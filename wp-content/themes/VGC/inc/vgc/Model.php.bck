@@ -1,0 +1,14 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: tuanlam
+ * Date: 4/3/15
+ * Time: 10:09 AM
+ */
+
+namespace VGC;
+
+
+abstract class Model {
+
+}
