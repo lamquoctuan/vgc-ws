@@ -8,6 +8,12 @@ $taxGenus->addInit();
 $taxBrand = new \app\models\Taxonomy();
 $taxBrand->setAttributes(array('name' => 'brand', 'object_type' => 'product', 'label' => 'Brand', 'label_plural' => 'Brands'));
 $taxBrand->addInit();
+$taxMemory = new \app\models\Taxonomy();
+$taxMemory->setAttributes(array('name' => 'memory', 'object_type' => 'product', 'label' => 'Memory', 'label_plural' => 'Memories'));
+$taxMemory->addInit();
+$taxCollection = new \app\models\Taxonomy();
+$taxCollection->setAttributes(array('name' => 'collection', 'object_type' => 'product', 'label' => 'Collection', 'label_plural' => 'Collections'));
+$taxCollection->addInit();
 
 add_action( 'init', 'product_init' );
 /**
@@ -44,7 +50,7 @@ function product_init() {
         'has_archive'        => true,
         'hierarchical'       => true,
         'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+        'supports'           => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'excerpt', 'comments', 'gallery' )
     );
 
     register_post_type( 'product', $args );

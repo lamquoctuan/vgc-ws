@@ -31,7 +31,8 @@ function vgc_setup()
      * Enable support for Post Thumbnails on posts and pages.
      */
     add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 825, 510, true );
+    set_post_thumbnail_size( 538, 538, true );
+    add_image_size( 'product-small', 100, 100 );
 
     // This theme uses wp_nav_menu() in five locations.
     register_nav_menus( array(
@@ -63,6 +64,23 @@ function vgc_setup()
 }
 endif; // vgc_setup
 add_action( 'after_setup_theme', 'vgc_setup' );
+
+/**
+ * Register widget area.
+ *
+ */
+function vgc_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Product Sidebar', 'vgc' ),
+        'id'            => 'sidebar-product',
+        'description'   => __( 'Add widgets here to appear in product sidebar.', 'vgc' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'vgc_widgets_init' );
 
 if ( ! function_exists( 'vgc_fonts_url' ) ) :
     /**
@@ -237,9 +255,8 @@ add_action ( 'vgc_init', 'autoload' );
 /**
  * Activates default theme features.
  */
-function vgc_theme_support() {
-    // * Turn on HTML5, responsive viewport & footer widgets if Genesis is active
-    add_theme_support ( 'html5' );
+function vgc_widgets() {
+    $productWigdget = new \app\widgets\ProductMenu();
 }
-add_action ( 'vgc_init', 'vgc_theme_support' );
+add_action ( 'vgc_init', 'vgc_widgets' );
 do_action ('vgc_init');
