@@ -190,7 +190,7 @@
             </div>
 
         </div>
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             $jq(document).ready(function(){
                 $jq('.ma-onsaleproductslider-container .bxslider').bxSlider(
                     {
@@ -206,6 +206,6 @@
                     }
                 );
             });
-        </script>
+        </script>-->
     </div>
 </div>

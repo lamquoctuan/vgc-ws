@@ -1,5 +1,4 @@
 <p class="product-image">
-<!--    <img src="--><?php //echo TEMP_URI;?><!--/assets/images/detail/1.jpg" />-->
     <?php
     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
         the_post_thumbnail();
@@ -30,17 +29,7 @@
                     <span><img src="'. $url .'" width="'.$width.'" height="'.$height.'" alt="'.$alt.'"></span>
                 </div>';
             }
-//            var_dump($size, $thumb, $width, $height);
         }
         ?>
-<!--        <div class="col-sm-4 col-md-4 col-sms-12">
-            <span><img src="<?php /*echo TEMP_URI;*/?>/assets/images/detail/thumb/1a.jpg" width="100" height="100" alt=""></span>
-        </div>
-        <div class="col-sm-4 col-md-4 col-sms-12">
-            <span><img src="<?php /*echo TEMP_URI;*/?>/assets/images/detail/thumb/1b.jpg" width="100" height="100" alt=""></span>
-        </div>
-        <div class="col-sm-4 col-md-4 col-sms-12">
-            <span><img src="<?php /*echo TEMP_URI;*/?>/assets/images/detail/thumb/1c.jpg" width="100" height="100" alt=""></span>
-        </div>-->
     </div>
 </div>
