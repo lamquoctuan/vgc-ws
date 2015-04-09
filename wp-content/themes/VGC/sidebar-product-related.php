@@ -49,62 +49,7 @@
                 endforeach;
                 wp_reset_postdata();
                 ?>
-               <!-- <li class="item first">
-                    <a href="#" title="Fusce aliquam" class="product-image">
-                        <img src="<?php /*echo TEMP_URI;*/?>/assets/images/best/1.jpg" width="500" height="500" alt="Jewelry Name">
-                    </a>
-                    <div class="box-feature">
-                        <h2 class="product-name"><a href="" title="Jewelry Name">Jewelry Name</a></h2>
-                        <div class="price-box">
-                            <p class="special-price">
-                                <span class="price-label">Special Price</span>
-                                <span class="price" id="product-price-1">$100.00</span>
-                            </p>
-                            <p class="old-price">
-                                <span class="price-label">Regular Price:</span>
-                                <span class="price" id="old-price-1">$170.00</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="item">
-                    <a href="#" title="Proin lectus ipsum" class="product-image">
-                        <img src="<?php /*echo TEMP_URI;*/?>/assets/images/best/2.jpg" width="500" height="500" alt="Jewelry Name">
-                    </a>
-                    <div class="box-feature">
-                        <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>
-                        <div class="price-box">
-                            <p class="special-price">
-                                <span class="price-label">Special Price</span>
-                                <span class="price" id="product-price-1">$100.00</span>
-                            </p>
-                            <p class="old-price">
-                                <span class="price-label">Regular Price:</span>
-                                <span class="price" id="old-price-1">$170.00</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="item last">
-                    <a href="#" title="Quisque in arcu" class="product-image">
-                        <img src="<?php /*echo TEMP_URI;*/?>/assets/images/best/3.jpg" width="500" height="500" alt="Jewelry Name">
-                    </a>
-                    <div class="box-feature">
-                        <h2 class="product-name"><a href="#" title="Jewelry Name">Jewelry Name</a></h2>
-                        <div class="price-box">
-                            <p class="special-price">
-                                <span class="price-label">Special Price</span>
-                                <span class="price" id="product-price-1">$100.00</span>
-                            </p>
-                            <p class="old-price">
-                                <span class="price-label">Regular Price:</span>
-                                <span class="price" id="old-price-1">$170.00</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>-->
             </ul>
-
         </div>
         <!-- end exist product -->
     </div>
@@ -231,9 +176,9 @@
             </div>
 
         </div>
-        <!--<script type="text/javascript">
-            $jq(document).ready(function(){
-                $jq('.ma-onsaleproductslider-container .bxslider').bxSlider(
+        <script type="text/javascript">
+            $bxs(document).ready(function(){
+                $bxs('.ma-onsaleproductslider-container .bxslider').bxSlider(
                     {
                         speed: 1000,
                         pause: 600,
@@ -247,6 +192,6 @@
                     }
                 );
             });
-        </script>-->
+        </script>
     </div>
 </div>

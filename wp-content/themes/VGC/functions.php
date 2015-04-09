@@ -161,7 +161,7 @@ if ( ! function_exists( 'vgc_enqueue_styles' ) ) :
     //    wp_enqueue_style( 'vgc-widgets', TEMP_URI . '/assets/css/temp/widgets.css', array(), '20150320' , 'all');
         wp_enqueue_style( 'vgc-custommenu', TEMP_URI . '/assets/css/temp/custommenu.css', array(), '20150320' , 'all');
         wp_enqueue_style( 'vgc-effect', TEMP_URI . '/assets/css/temp/effect.css', array(), '20150320' , 'all');
-    //    wp_enqueue_style( 'vgc-ma.onsaleslider', TEMP_URI . '/assets/css/temp/ma.onsaleslider.css', array(), '20150320' , 'all');
+
         wp_enqueue_style( 'vgc-categorytabs', TEMP_URI . '/assets/css/temp/categorytabs.css', array(), '20150320' , 'all');
     //    wp_enqueue_style( 'vgc-categorytabsliders', TEMP_URI . '/assets/css/temp/categorytabsliders.css', array(), '20150320' , 'all');
         wp_enqueue_style( 'vgc-searchbycategory', TEMP_URI . '/assets/css/temp/searchbycategory.css', array(), '20150320' , 'all');
@@ -180,6 +180,8 @@ if ( ! function_exists( 'vgc_enqueue_styles' ) ) :
         //  Home banner sequence
         if (is_home() || is_front_page())
             wp_enqueue_style( 'vgc-bannersequence', TEMP_URI . '/assets/sequence/css/bannersequence.css', array(), '20150320' , 'all');
+        if (is_singular('product'))
+            wp_enqueue_style( 'vgc-ma.onsaleslider', TEMP_URI . '/assets/ma.bxslider/css/ma.onsaleslider.css', array(), '20150320' , 'all');
     }
 endif;
 
@@ -226,10 +228,12 @@ if ( ! function_exists( 'vgc_enqueue_scripts' ) ) :
         //    wp_enqueue_script( 'vgc-jquery.fancybox-js', TEMP_URI . '/assets/js/jquery.fancybox.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-likebox-js', TEMP_URI . '/assets/js/likebox.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-ma.script.vert-js', TEMP_URI . '/assets/js/ma.script.vert.js', array(), '20150320', false );
-        //    wp_enqueue_script( 'vgc-ma.bxslider.min-js', TEMP_URI . '/assets/js/ma.bxslider.min.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-colorpicker-js', TEMP_URI . '/assets/js/colorpicker.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-jquery.cookie-js', TEMP_URI . '/assets/js/jquery.cookie.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-ma.nivo.js-js', TEMP_URI . '/assets/js/ma.nivo.js.js', array(), '20150320', false );
+
+        if (is_singular('product'))
+            wp_enqueue_script( 'vgc-ma.bxslider.min-js', TEMP_URI . '/assets/ma.bxslider/js/ma.bxslider.min.js', array(), '20150320', false );
     }
 endif;
 
