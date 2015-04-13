@@ -6,7 +6,7 @@ if ( has_nav_menu( 'left-side' ) || is_active_sidebar( 'sidebar-product' )  ) : 
     <?php endif; ?>
 
     <?php if ( is_active_sidebar( 'sidebar-product' ) ) : ?>
-        <?php dynamic_sidebar( 'sidebar-product' ); ?>
+<!--        --><?php //dynamic_sidebar( 'sidebar-product' ); ?>
     <?php endif; ?>
 
 

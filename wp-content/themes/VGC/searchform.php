@@ -10,8 +10,8 @@ $menuListHTML = '';
 if (!empty($menuCatSearch)) {
     $menuListHTML = '<ul class="dropdown-menu inner selectpicker" role="menu">';
     //$menuListHTML .= '<li rel="0" class="selected"><a tabindex="0" class="" style=""><span class="text">'.$menuCatSearch['menu_name'].'</span></a></li>';
-    for ($idx=0; $idx<count($menuCatSearch[items]); $idx++) {
-        $menuListHTML .= '<li rel="'.($idx+1).'"><a tabindex="0"><span class="text">'.$menuCatSearch[items][$idx]['title'].'</span></a></li>';
+    for ($idx=0; $idx<count($menuCatSearch['items']); $idx++) {
+        $menuListHTML .= '<li rel="'.($idx+1).'"><a tabindex="0"><span class="text">'.$menuCatSearch['items'][$idx]['title'].'</span></a></li>';
     }
     $menuListHTML .= '</ul>';
 }

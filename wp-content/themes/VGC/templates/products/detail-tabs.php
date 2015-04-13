@@ -14,29 +14,13 @@
             <h2>Details</h2>
 
             <div class="std">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor.
-                Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus
-                mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem
-                eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus
-                ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit
-                est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque
-                metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula
-                euismod eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                egestas. Nam erat mi, rutrum at sollicitudin rhoncus, ultricies posuere erat. Duis convallis, arcu nec
-                aliquam consequat, purus felis vehicula felis, a dapibus enim lorem nec augue. Nunc facilisis sagittis
-                ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc.
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend
-                laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt.
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim
-                purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis
-                interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel
-                tellus non nunc mattis lobortis.
+                <?php the_content();?>
             </div>
         </div>
         <div aria-labelledby="product-reviews-tab" id="product-reviews" class="product-tabs-content tab-pane fade"
              role="tabpanel">
-            <div class="box-collateral box-reviews row" id="customer-reviews">
+            <?php comments_template('/comments-product.php'); ?>
+            <!--<div class="box-collateral box-reviews row" id="customer-reviews">
                 <div class="ma-review-col1 col-xs-12 col-sm-6">
                     <h2>Customer Reviews</h2>
                     <dl>
@@ -49,7 +33,7 @@
                         <form action="" method="post" id="review-form">
                             <input name="form_key" type="hidden" value="21G5GuOBqDvzTqnj">
                             <fieldset>
-                                <h3>You're reviewing: <span>Voluptas nulla</span></h3>
+                                <h3>You're reviewing: <span><?php /*the_title();*/?></span></h3>
                                 <ul class="form-list">
                                     <li>
                                         <label for="nickname_field" class="required"><em>*</em>Nickname</label>
@@ -86,7 +70,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div aria-labelledby="product-tags-tab" id="product-tags" class="product-tabs-content tab-pane fade"
              role="tabpanel">

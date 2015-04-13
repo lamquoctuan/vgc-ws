@@ -30,7 +30,10 @@ if (!empty($menuLeftSide)) {
 			<div class="main">
 				<div class="row">
 					<div class="col-left sidebar col-xs-12 col-sm-3">
-						<div class="navleft-container visible-lg visible-md">
+                        <?php if ( has_nav_menu( 'left-side' ) ) :
+                            get_template_part( 'templates/menus/left', 'side' );?>
+                        <?php endif; ?>
+						<!--<div class="navleft-container visible-lg visible-md">
 							<div class="megamenu-title"><h2>Category</h2></div>
 							<div id="pt_vmegamenu" class="pt_vmegamenu">
 
@@ -78,7 +81,7 @@ if (!empty($menuLeftSide)) {
 						       </div>
 							   <div class="clearBoth"></div>
 							</div>
-						</div>
+						</div>-->
 						
 						
 						<div class="ma-featured-products">
