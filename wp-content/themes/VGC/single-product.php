@@ -17,9 +17,7 @@ get_header(); ?>
                             ?>
                             <div class="col-main col-xs-12 col-sm-9">
                                 <div class="breadcrumbs">
-                                <pre>
                         <?php $term = getTerm(); ?>
-                                    </pre>
                                     <ul>
                                         <li class="home">
                                             <a href="/" title="Go to Home Page">Home</a>
