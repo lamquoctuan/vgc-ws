@@ -27,11 +27,11 @@
                     $salePriceFormatted = number_format($salePrice, 2);
                     ?>
                     <li class="<?php echo $classLi;?>">
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="product-image">
+                        <a href="<?php echo post_permalink( $post->ID ); ?>" title="<?php the_title(); ?>" class="product-image">
                             <?php the_post_thumbnail('product-small');?>
                         </a>
                         <div class="box-feature">
-                            <h2 class="product-name"><a href="" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                            <h2 class="product-name"><a href="<?php echo post_permalink( $post->ID ); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
                             <div class="price-box">
                                 <p class="special-price">
                                     <span class="price-label">Special Price</span>
@@ -100,7 +100,7 @@
                                             </figure>
                                         </article>
                                     </div>
-                                    <h2 class="product-name"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                                    <h2 class="product-name"><a href="<?php echo post_permalink( $post->ID ); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
                                     <div class="review-price">
                                         <div class="price-box">
                                             <p class="special-price">
