@@ -91,100 +91,12 @@ if (!empty($menuLeftSide)) {
 
                             <div class="featured-products">
                                 <ul class="products-grid  first last odd">
-                                    <li class="item first">
-                                        <a href="detail.html" title="Jewelry Name" class="product-image">
-                                            <img src="<?php echo TEMP_URI; ?>/assets/images/best/1.jpg" width="500"
-                                                 height="500" alt="Jewelry Name">
-                                        </a>
-
-                                        <div class="box-feature">
-                                            <h2 class="product-name"><a href="detail.html" title="Jewelry Name">Jewelry
-                                                    Name</a></h2>
-
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price-label">Special Price</span>
-                                                    <span class="price" id="product-price-1">$100.00</span>
-                                                </p>
-
-                                                <p class="old-price">
-                                                    <span class="price-label">Regular Price:</span>
-                                                    <span class="price" id="old-price-1">$170.00</span>
-                                                </p>
-                                            </div>
-
-                                            <div class="actions">
-                                                <button type="button" class="button btn-cart" rel="tooltip"
-                                                        data-original-title=""><span><span>+ Add to Cart</span></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!--  -->
-                                    <li class="item">
-                                        <a href="detail.html" title="Proin lectus ipsum" class="product-image">
-                                            <img src="<?php echo TEMP_URI; ?>/assets/images/best/2.jpg" width="500"
-                                                 height="500" alt="Jewelry Name">
-                                        </a>
-
-                                        <div class="box-feature">
-                                            <h2 class="product-name"><a href="detail.html" title="Jewelry Name">Jewelry
-                                                    Name</a></h2>
-
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price-label">Special Price</span>
-                                                    <span class="price" id="product-price-1">$100.00</span>
-                                                </p>
-
-                                                <p class="old-price">
-                                                    <span class="price-label">Regular Price:</span>
-                                                    <span class="price" id="old-price-1">$170.00</span>
-                                                </p>
-                                            </div>
-
-                                            <div class="actions">
-                                                <button type="button" class="button btn-cart" rel="tooltip"
-                                                        data-original-title=""><span><span>+ Add to Cart</span></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!--  -->
-                                    <li class="item last">
-                                        <a href="detail.html" title="Quisque in arcu" class="product-image">
-                                            <img src="<?php echo TEMP_URI; ?>/assets/images/best/3.jpg" width="500"
-                                                 height="500" alt="Jewelry Name">
-                                        </a>
-
-                                        <div class="box-feature">
-                                            <h2 class="product-name"><a href="detail.html" title="Jewelry Name">Jewelry
-                                                    Name</a></h2>
-
-                                            <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price-label">Special Price</span>
-                                                    <span class="price" id="product-price-1">$100.00</span>
-                                                </p>
-
-                                                <p class="old-price">
-                                                    <span class="price-label">Regular Price:</span>
-                                                    <span class="price" id="old-price-1">$170.00</span>
-                                                </p>
-                                            </div>
-
-                                            <div class="actions">
-                                                <button type="button" class="button btn-cart" rel="tooltip"
-                                                        data-original-title=""><span><span>+ Add to Cart</span></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </li>
+                                    <?php theBestSellers();?>
                                 </ul>
                                 <!--  -->
-                                <script type="text/javascript">
+                                <!--<script type="text/javascript">
                                     decorateGeneric($$('ul.products-grid'), ['odd', 'even', 'first', 'last'])
-                                </script>
+                                </script>-->
                             </div>
                             <!-- end exist product -->
                         </div>
@@ -193,25 +105,25 @@ if (!empty($menuLeftSide)) {
                             <div class="flexslider">
                                 <div class="ma-loading" style="display: none;"></div>
                                 <script type="text/javascript">
-                                    // 	$jq(window).load(function(){
-                                    // 	  $jq('.ma-banner8-container .flexslider').flexslider({
-                                    // 		slideshow: true,
-                                    // 		animation: "slide",
-                                    // 		slideshowSpeed: 3000,
-                                    // 		animationSpeed: 500,
-                                    // 										directionNav: false,
-                                    // 						start: function(slider){
-                                    // 			$jq('.ma-loading').css("display","none");
-                                    // 		},
-                                    // 		before: function(){
-                                    // 			$jq('.banner8-title, .banner8-des').css("left","-550px");
-                                    // 			$jq('.banner8-readmore').css("left","-1500px");
-                                    // 		},
-                                    // 		after: function(){
-                                    // 			$jq('.banner8-title, .banner8-des, .banner8-readmore').css("left","100px")
-                                    // 		}
-                                    // 	  });
-                                    // 	});
+                                    $fsd(window).load(function(){
+                                        $fsd('.ma-banner8-container .flexslider').flexslider({
+                                    		slideshow: true,
+                                    		animation: "slide",
+                                    		slideshowSpeed: 3000,
+                                    		animationSpeed: 500,
+                                    										directionNav: false,
+                                    						start: function(slider){
+                                                                $fsd('.ma-loading').css("display","none");
+                                    		},
+                                    		before: function(){
+                                                $fsd('.banner8-title, .banner8-des').css("left","-550px");
+                                                $fsd('.banner8-readmore').css("left","-1500px");
+                                    		},
+                                    		after: function(){
+                                                $fsd('.banner8-title, .banner8-des, .banner8-readmore').css("left","100px")
+                                    		}
+                                        });
+                                    });
                                 </script>
                                 <div class="flex-viewport">
                                     <ul class="slides">
@@ -402,170 +314,10 @@ if (!empty($menuLeftSide)) {
                                     <div class="tab_container">
                                         <div class="tab_content_new_products">
                                             <ul class="products-grid row even">
-                                                <li class="col-md-4 col-sm-4 col-sms-12 item first">
-                                                    <div class="item-inner">
-                                                        <a href="detail.html" title="Jewelry Name"
-                                                           class="product-image">
-                                                            <img src="<?php echo TEMP_URI; ?>/assets/images/most/1.jpg"
-                                                                 alt="Jewelry Name">
-                                                        </a>
-
-                                                        <div class="box-item">
-                                                            <h2 class="product-name"><a href="detail.html"
-                                                                                        title="Jewelry Name">Jewelry
-                                                                    Name</a></h2>
-
-                                                            <div class="price-box">
-                                                                <span class="regular-price" id="product-price-18"><span
-                                                                        class="price">$86.00</span></span>
-                                                            </div>
-                                                            <div class="actions">
-                                                                <div class="cart-content">
-                                                                    <button type="button" class="button btn-cart"
-                                                                            rel="tooltip" data-original-title="">
-                                                                        <span><span>+ Add to Cart</span></span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-4 col-sm-4 col-sms-12 item">
-                                                    <div class="item-inner">
-                                                        <a href="detail.html" title="Jewelry Name"
-                                                           class="product-image">
-                                                            <img src="<?php echo TEMP_URI; ?>/assets/images/most/2.jpg"
-                                                                 alt="Jewelry Name">
-                                                        </a>
-
-                                                        <div class="box-item">
-                                                            <h2 class="product-name"><a href="detail.html"
-                                                                                        title="Jewelry Name">Jewelry
-                                                                    Name</a></h2>
-
-                                                            <div class="price-box">
-                                                                <span class="regular-price" id="product-price-18"><span
-                                                                        class="price">$86.00</span></span>
-                                                            </div>
-                                                            <div class="actions">
-                                                                <div class="cart-content">
-                                                                    <button type="button" class="button btn-cart"
-                                                                            rel="tooltip" data-original-title="">
-                                                                        <span><span>+ Add to Cart</span></span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-4 col-sm-4 col-sms-12 item last">
-                                                    <div class="item-inner">
-                                                        <a href="detail.html" title="Jewelry Name"
-                                                           class="product-image">
-                                                            <img src="<?php echo TEMP_URI; ?>/assets/images/most/3.jpg"
-                                                                 alt="Jewelry Name">
-                                                        </a>
-
-                                                        <div class="box-item">
-                                                            <h2 class="product-name"><a href="detail.html"
-                                                                                        title="Jewelry Name">Jewelry
-                                                                    Name</a></h2>
-
-                                                            <div class="price-box">
-                                                                <span class="regular-price" id="product-price-18"><span
-                                                                        class="price">$86.00</span></span>
-                                                            </div>
-                                                            <div class="actions">
-                                                                <div class="cart-content">
-                                                                    <button type="button" class="button btn-cart"
-                                                                            rel="tooltip" data-original-title="">
-                                                                        <span><span>+ Add to Cart</span></span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                                <?php $productsWished = theMostWished(); ?>
                                             </ul>
                                             <ul class="products-grid row odd">
-                                                <li class="col-md-4 col-sm-4 col-sms-12 item first">
-                                                    <div class="item-inner">
-                                                        <a href="detail.html" title="Jewelry Name"
-                                                           class="product-image">
-                                                            <img src="<?php echo TEMP_URI; ?>/assets/images/most/4.jpg"
-                                                                 alt="Jewelry Name">
-                                                        </a>
-
-                                                        <div class="box-item">
-                                                            <h2 class="product-name"><a href="detail.html"
-                                                                                        title="Jewelry Name">Jewelry
-                                                                    Name</a></h2>
-
-                                                            <div class="price-box">
-                                                                <span class="regular-price" id="product-price-21"><span
-                                                                        class="price">$98.00</span> </span>
-                                                            </div>
-                                                            <div class="actions">
-                                                                <div class="cart-content">
-                                                                    <button type="button" class="button btn-cart"
-                                                                            rel="tooltip" data-original-title="">
-                                                                        <span><span>+ Add to Cart</span></span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-4 col-sm-4 col-sms-12 item">
-                                                    <div class="item-inner">
-                                                        <a href="detail.html" title="Jewelry Name"
-                                                           class="product-image">
-                                                            <img src="<?php echo TEMP_URI; ?>/assets/images/most/5.jpg"
-                                                                 alt="Jewelry Name">
-                                                        </a>
-
-                                                        <div class="box-item">
-                                                            <h2 class="product-name"><a href="detail.html"
-                                                                                        title="Jewelry Name">Jewelry
-                                                                    Name</a></h2>
-
-                                                            <div class="price-box">
-                                                                <span class="regular-price" id="product-price-21"><span
-                                                                        class="price">$98.00</span> </span>
-                                                            </div>
-                                                            <div class="actions">
-                                                                <div class="cart-content">
-                                                                    <button type="button" class="button btn-cart"
-                                                                            rel="tooltip" data-original-title="">
-                                                                        <span><span>+ Add to Cart</span></span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="col-md-4 col-sm-4 col-sms-12 item last">
-                                                    <div class="item-inner">
-                                                        <a href="detail.html" title="Jewelry Name"
-                                                           class="product-image">
-                                                            <img src="<?php echo TEMP_URI; ?>/assets/images/most/6.jpg"
-                                                                 alt="Jewelry Name">
-                                                        </a>
-
-                                                        <div class="box-item">
-                                                            <h2 class="product-name"><a href="detail.html"
-                                                                                        title="Jewelry Name">Jewelry
-                                                                    Name</a></h2>
-
-                                                            <div class="price-box">
-                                                                <span class="regular-price" id="product-price-21"><span
-                                                                        class="price">$98.00</span> </span>
-                                                            </div>
-                                                            <div class="actions">
-                                                                <div class="cart-content">
-                                                                    <button type="button" class="button btn-cart"
-                                                                            rel="tooltip" data-original-title="">
-                                                                        <span><span>+ Add to Cart</span></span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                                <?php theMostWished($productsWished); ?>
                                             </ul>
                                         </div>
                                     </div>

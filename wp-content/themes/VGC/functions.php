@@ -168,7 +168,7 @@ if ( ! function_exists( 'vgc_enqueue_styles' ) ) :
         wp_enqueue_style( 'vgc-ma.cltool', TEMP_URI . '/assets/css/temp/ma.cltool.css', array(), '20150320' , 'all');
     //    wp_enqueue_style( 'vgc-ma.upsellslider', TEMP_URI . '/assets/css/temp/ma.upsellslider.css', array(), '20150320' , 'all');
         wp_enqueue_style( 'vgc-leftvmegamenu', TEMP_URI . '/assets/css/temp/leftvmegamenu.css', array(), '20150320' , 'all');
-//1        wp_enqueue_style( 'vgc-bannersequencener8', TEMP_URI . '/assets/css/temp/ma.banner8.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-bannersequencener8', TEMP_URI . '/assets/ma.flexslider/css/ma.banner8.css', array(), '20150320' , 'all');
         //    wp_enqueue_style( 'vgc-ma.newslider', TEMP_URI . '/assets/css/temp/ma.newslider.css', array(), '20150320' , 'all');
         wp_enqueue_style( 'vgc-ajax_cart_super', TEMP_URI . '/assets/css/temp/ajax_cart_super.css', array(), '20150320' , 'all');
         //    wp_enqueue_style( 'vgc-jquery-ui', TEMP_URI . '/assets/css/temp/jquery-ui.css', array(), '20150320' , 'all');
@@ -201,16 +201,18 @@ if ( ! function_exists( 'vgc_enqueue_scripts' ) ) :
         wp_enqueue_script( 'vgc-bootstrap-select.min-js', TEMP_URI . '/assets/bootstrap-select/js/bootstrap-select.min.js', array('vgc-jquery-js'), '20150320', false );
 
         //  Home banner sequence
-        if (is_home() || is_front_page())
+        if (is_home() || is_front_page()) {
             wp_enqueue_script( 'vgc-sequence-js', TEMP_URI . '/assets/sequence/js/jquery.sequence-min.js', array('vgc-main-js'), '20150320', false );
+//            wp_enqueue_script( 'vgc-js-js', TEMP_URI . '/assets/ma/js/js.js', array('vgc-prototype-js', 'vgc-validation-js', 'vgc-controls-js'), '20150320', false );
+        }
+        wp_enqueue_script( 'vgc-flexslider-js', TEMP_URI . '/assets/ma.flexslider/js/ma.flexslider.js', array(), '20150320', false );
 
 //        wp_enqueue_script( 'vgc-prototype-js', TEMP_URI . '/assets/js/prototype.js', array('vgc-jquery-js'), '20150320', false );
 //        wp_enqueue_script( 'vgc-validation-js', TEMP_URI . '/assets/js/validation.js', array(), '20150320', false );
 //        wp_enqueue_script( 'vgc-effects-js', TEMP_URI . '/assets/js/effects.js', array(), '20150320', false );
 //        wp_enqueue_script( 'vgc-controls-js', TEMP_URI . '/assets/js/controls.js', array('vgc-prototype-js','vgc-effects-js'), '20150320', false );
-//        wp_enqueue_script( 'vgc-js-js', TEMP_URI . '/assets/js/js.js', array('vgc-prototype-js', 'vgc-validation-js', 'vgc-controls-js'), '20150320', false );
+
 //        wp_enqueue_script( 'vgc-slide-js', TEMP_URI . '/assets/js/ma.jq.slide.js', array(), '20150320', false );
-//        wp_enqueue_script( 'vgc-flexslider-js', TEMP_URI . '/assets/js/ma.flexslider.js', array(), '20150320', false );
 //        wp_enqueue_script( 'vgc-custommenu-js', TEMP_URI . '/assets/js/custommenu.js', array(), '20150320', false );
 //        wp_enqueue_script( 'vgc-ma.mobilemenu-js', TEMP_URI . '/assets/js/ma.mobilemenu.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-ccard-js', TEMP_URI . '/assets/js/ccard.js', array(), '20150320', false );

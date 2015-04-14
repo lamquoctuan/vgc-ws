@@ -28,11 +28,12 @@ function my_action_javascript()
     </script> <?php
 }
 
-add_action( 'wp_footer', 'product_viewed_count' );
-function product_viewed_count() {
+add_action('wp_footer', 'productViewedCount');
+function productViewedCount()
+{
     global $post;
     if (is_singular('product')) {
         $viewed = intval(get_field('viewed_count', $post->ID));
-        $result = update_field('viewed_count', $viewed+1, $post->ID);
+        update_field('viewed_count', $viewed + 1, $post->ID);
     }
 }

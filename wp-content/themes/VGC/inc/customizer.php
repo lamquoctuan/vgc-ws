@@ -71,6 +71,7 @@ if (!function_exists('getMenuListArray')) :
                     'title' => $menuItem->title,
                     'url' => $menuItem->url,
                     'attr_title' => $menuItem->attr_title,
+                    'object_id' => $menuItem->object_id
                 );
                 array_push($result['items'], $item);
             }
@@ -162,5 +163,118 @@ if (!function_exists('getTerm')) :
             $termReturn->link = $termLink;
             return $termReturn;
         }
+    }
+endif;
+
+if (!function_exists('theMostWished')):
+    function theMostWished($postNotIn = array())
+    {
+        global $post;
+        $productsWished = array();
+        $args = array(
+            'posts_per_page' => 3,
+            'orderby' => array('meta_value_num' => 'DESC', 'post_date' => 'DESC'),
+            'meta_key' => 'wished_count',
+            'post_type' => 'product',
+            'post_status' => 'publish',
+            'post__not_in' => $postNotIn
+        );
+        $theWished = new WP_Query($args);
+        if ($theWished->have_posts()) :
+            $idx = 0;
+            while ($theWished->have_posts()) : $theWished->the_post();
+                array_push($productsWished, $post->ID);
+                $itemClass = ($idx == 0 ? 'first' : ($idx == 2 ? 'last' : ''));
+                $productDetails = fetchProductDetails(); ?>
+                <li class="col-md-4 col-sm-4 col-sms-12 item <?php echo $itemClass; ?>">
+                    <div class="item-inner">
+                        <a href="<?php the_permalink(); ?>"
+                           title="<?php the_title(); ?>"
+                           class="product-image">
+                            <?php the_post_thumbnail(); ?>
+                        </a>
+
+                        <div class="box-item">
+                            <h2 class="product-name"><a
+                                    href="<?php the_permalink(); ?>"
+                                    title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                            </h2>
+
+                            <div class="price-box"><span class="regular-price" id="product-price-18"><span
+                                        class="price"><?php echo $productDetails['unit_price']['formatted']; ?></span></span>
+                            </div>
+                            <div class="actions">
+                                <div class="cart-content">
+                                    <button type="button"
+                                            class="button btn-cart"
+                                            rel="tooltip"
+                                            data-original-title="">
+                                        <span><span>+ Add to Cart</span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <?php $idx++;
+            endwhile;?>
+            <?php wp_reset_postdata(); ?>
+        <?php endif;
+        return $productsWished;
+    }
+endif;
+
+if (!function_exists('theBestSellers')):
+    function theBestSellers($postNotIn = array())
+    {
+        global $post;
+        $args = array(
+            'posts_per_page' => 3,
+            'orderby' => array('meta_value_num' => 'DESC', 'post_date' => 'DESC'),
+            'meta_key' => 'selling_count',
+            'post_type' => 'product',
+            'post_status' => 'publish',
+            'post__not_in' => $postNotIn
+        );
+        $theBestSellers = new WP_Query($args);
+        if ($theBestSellers->have_posts()) :
+            $idx = 0;
+            while ($theBestSellers->have_posts()) : $theBestSellers->the_post();
+                $itemClass = ($idx == 0 ? 'first' : ($idx == 2 ? 'last' : ''));
+                $productDetails = fetchProductDetails(); ?>
+                <li class="item <?php echo $itemClass; ?>">
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="product-image">
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+
+                    <div class="box-feature">
+                        <h2 class="product-name"><a href="<?php the_permalink(); ?>"
+                                                    title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+
+                        <div class="price-box">
+                            <p class="special-price">
+                                <span class="price-label">Special Price</span>
+                                <span class="price"
+                                      id="product-price-1"><?php echo $productDetails['sale_price']['formatted']; ?></span>
+                            </p>
+
+                            <p class="old-price">
+                                <span class="price-label">Regular Price:</span>
+                                <span class="price"
+                                      id="old-price-1"><?php echo $productDetails['unit_price']['formatted']; ?></span>
+                            </p>
+                        </div>
+
+                        <div class="actions">
+                            <button type="button" class="button btn-cart" rel="tooltip"
+                                    data-original-title=""><span><span>+ Add to Cart</span></span>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <?php $idx++;
+            endwhile;?>
+            <?php wp_reset_postdata(); ?>
+        <?php endif;
     }
 endif;

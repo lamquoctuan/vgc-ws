@@ -25,7 +25,7 @@ $the_query = new WP_Query($args); ?>
                 </li>
                 <?php $term = getTerm(); ?>
                 <li class="category3">
-                    <strong><?php echo $term->Name; ?></strong>
+                    <strong><?php echo $term->name; ?></strong>
                 </li>
             </ul>
         </div>
