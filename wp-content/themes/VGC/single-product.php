@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: tuanlam
- * Date: 3/29/15
- * Time: 4:52 AM
- */
 get_header(); ?>
     <div class="ma-main-container col2-right-layout">
         <div class="container">
