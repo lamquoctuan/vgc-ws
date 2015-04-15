@@ -45,3 +45,20 @@ $the_query = new WP_Query($args);
         </ul>
     <?php endif; ?>
 </div>
+<?php if (is_single()) :?>
+<div class="widget widget_tag_cloud">
+    <div class="popular-title">
+        <h2>Tags</h2>
+    </div>
+    <div class="tagcloud">
+        <a href="#" class="tag-link" title="10 topics">Plating</a>
+        <a href="#" class="tag-link" title="2 topics">Wedding</a>
+        <a href="#" class="tag-link" title="7 topics">Rings</a>
+        <a href="#" class="tag-link" title="3 topics">Bracelets</a>
+        <a href="#" class="tag-link" title="4 topics" >Platinum</a>
+        <a href="#" class="tag-link" title="9 topics">Jewelry</a>
+        <a href="#" class="tag-link" title="11 topics">Watches</a>
+    </div>
+</div>
+<?php get_template_part('templates/banner', 'sale');?>
+<?php endif;?>
