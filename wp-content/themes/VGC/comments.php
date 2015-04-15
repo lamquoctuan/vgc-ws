@@ -30,8 +30,6 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<?php twentyfifteen_comment_nav(); ?>
-
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
@@ -42,15 +40,13 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php twentyfifteen_comment_nav(); ?>
-
 	<?php endif; // have_comments() ?>
 
 	<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'vgc' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

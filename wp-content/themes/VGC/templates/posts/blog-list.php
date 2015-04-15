@@ -31,17 +31,18 @@ if ($the_query->have_posts()) : ?>
         $the_query->the_post();
         array_push($postsDisplay, $post->ID);
         $postDate = get_the_date('F j, Y', $post);
-//                                var_dump(get_post_format());
-        //        get_template_part( 'content', get_post_format() );
+        $postFeaturedImageId = get_post_thumbnail_id();
+        $postFeaturedImageSrc = wp_get_attachment_image_src($postFeaturedImageId, 'post-thumbnails');
+
         if ($idx % 2 == 0) :
             ?>
             <div class="row mb20">
         <?php endif;?>
         <div class="col-sm-6 col-md-6 col-sms-12">
             <article class="latestPost">
-                <a href="blog-detail.html" class="post-image">
+                <a href="<?php the_permalink();?>" class="post-image">
                     <div class="featured-thumbnail">
-                        <?php the_post_thumbnail();?>
+                        <img src="<?php echo $postFeaturedImageSrc[0];?>" width="500"/>
                     </div>
                 </a>
                 <header>
@@ -63,8 +64,8 @@ if ($the_query->have_posts()) : ?>
     endif;
         $idx++;
     endwhile; // End the loop.
-    else :
-        get_template_part('templates/content', 'none');
-    endif;
-    ?>
+else :
+    get_template_part('templates/content', 'none');
+endif;
+?>
 </div>

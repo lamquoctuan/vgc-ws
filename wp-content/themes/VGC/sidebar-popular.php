@@ -33,8 +33,10 @@ $the_query = new WP_Query($args);
                         <div class="post-data">
                             <div class="post-title"><a href="<?php the_permalink();?>"
                                                        title="<?php the_title();?>"><?php the_title();?></a></div>
-                            <div class="post-info"><span class="thetime"><?php echo $postDate;?></span> <span
-                                    class="thecomment"><?php echo comments_number();?></span>
+                            <div class="post-info"><span
+                                    class="thetime"><?php echo $postDate;?></span> <?php $numComments = get_comments_number();
+                                if ($numComments > 0) { ?><span
+                                    class="thecomment"><?php echo $numComments; ?></span><?php } ?>
                             </div>
                         </div>
                     </div>
