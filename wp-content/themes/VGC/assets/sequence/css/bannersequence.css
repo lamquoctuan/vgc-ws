@@ -892,7 +892,7 @@ h3 {
   transition-duration: 1.8s;
 }
 .link-slider3.subtitle-slider3 a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #b4a8a0;
+    background:url("../../../assets/images/icon-subtitle.png") no-repeat 80% 53% #b4a8a0;
     border-bottom: 3px solid #9a8f88;
     border-radius: 5px;
     color: #fff;
@@ -906,14 +906,14 @@ h3 {
     font-weight: 600;
 }
 .link-slider3.subtitle-slider3 a:hover {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #939da4;
+    background:url("../../../assets/images/icon-subtitle.png") no-repeat 80% 53% #939da4;
     border-bottom: 3px solid #818C95;
 }
 .animate-in .link-slider3 a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #b4a8a0;
+    background:url("../../../assets/images/icon-subtitle.png") no-repeat 80% 53% #b4a8a0;
 }
 .animate-out .link-slider3 a {
-    background:url("../images/icon-subtitle.png") no-repeat 80% 53% #b4a8a0;
+    background:url("../../../assets/images/icon-subtitle.png") no-repeat 80% 53% #b4a8a0;
 }
 .subtitle-slider3.intro-slider3 {
   left:-300px;
