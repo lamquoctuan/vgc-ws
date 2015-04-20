@@ -1,7 +1,7 @@
 <?php
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$paged = get_query_var('paged', 1);
 $taxonomyName = get_query_var('taxonomy');
-$postType = (get_query_var('post_type')) ? get_query_var('post_type') : 'product';
+$postType = get_query_var('post_type', 'product');
 $termSlug = get_query_var('term');
 $term = get_term_by('slug', $termSlug, $taxonomyName);
 $postsPerPage = 5; //get_option( 'posts_per_page' );

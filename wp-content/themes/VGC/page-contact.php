@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About
+ * Template Name: Contact
  */
 get_header();
 if (have_posts()) {

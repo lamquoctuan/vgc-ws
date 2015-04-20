@@ -1,5 +1,5 @@
 <?php
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$paged = get_query_var('paged', 1);
 $postsPerPage = 5; //get_option( 'posts_per_page' );
 $args = array(
     'posts_per_page' => $postsPerPage,

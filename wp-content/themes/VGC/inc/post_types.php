@@ -15,13 +15,13 @@ $taxCollection = new \app\models\Taxonomy();
 $taxCollection->setAttributes(array('name' => 'collection', 'object_type' => 'product', 'label' => 'Collection', 'label_plural' => 'Collections'));
 $taxCollection->addInit();
 
-add_action( 'init', 'product_init' );
+add_action( 'init', 'initProductPostType' );
 /**
  * Register a product post type.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
  */
-function product_init() {
+function initProductPostType() {
     $labels = array(
         'name'               => _x( 'Products', 'post type general name', 'vgc' ),
         'singular_name'      => _x( 'Product', 'post type singular name', 'vgc' ),
@@ -56,8 +56,50 @@ function product_init() {
     register_post_type( 'product', $args );
 }
 
+add_action( 'init', 'initAccountPostType' );
+/**
+ * Register a Account post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function initAccountPostType() {
+    $labels = array(
+        'name'               => _x( 'Account Pages', 'post type general name', 'vgc' ),
+        'singular_name'      => _x( 'Account Page', 'post type singular name', 'vgc' ),
+        'menu_name'          => _x( 'Account Pages', 'admin menu', 'vgc' ),
+        'name_admin_bar'     => _x( 'Account Page', 'add new on admin bar', 'vgc' ),
+        'add_new'            => _x( 'Add New', 'account page', 'vgc' ),
+        'add_new_item'       => __( 'Add New Account Page', 'vgc' ),
+        'new_item'           => __( 'New Account Page', 'vgc' ),
+        'edit_item'          => __( 'Edit Account Page', 'vgc' ),
+        'view_item'          => __( 'View Account Page', 'vgc' ),
+        'all_items'          => __( 'All Account Pages', 'vgc' ),
+        'search_items'       => __( 'Search Account Pages', 'vgc' ),
+        'parent_item_colon'  => __( 'Parent Account Pages:', 'vgc' ),
+        'not_found'          => __( 'No account pages found.', 'vgc' ),
+        'not_found_in_trash' => __( 'No account pages found in Trash.', 'vgc' )
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'account' ),
+        'has_archive'        => true,
+        'hierarchical'       => true,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'excerpt', 'comments', 'gallery' )
+    );
+
+    register_post_type( 'account-page', $args );
+}
+
 function vgc_rewrite_flush() {
-    product_init();
+    initProductPostType();
+    initAccountPostType();
     flush_rewrite_rules();
 }
 add_action( 'after_switch_theme', 'vgc_rewrite_flush' );

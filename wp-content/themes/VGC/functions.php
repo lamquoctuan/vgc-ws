@@ -96,9 +96,9 @@ if ( ! function_exists( 'vgc_fonts_url' ) ) :
         $subsets   = 'latin,latin-ext';
 
         /* translators: If there are characters in your language that are not supported by Titillium Web, translate this to 'off'. Do not translate into your own language. */
-        // if ( 'off' !== _x( 'on', 'Titillium Web font: on or off', 'vgc' ) ) {
-        //     $fonts[] = 'Titillium Web:400,300,300italic,400italic,600,600italic,700,700italic';
-        // }
+         if ( 'off' !== _x( 'on', 'Titillium Web font: on or off', 'vgc' ) ) {
+             $fonts[] = 'Titillium Web:400,300,300italic,400italic,600,600italic,700,700italic';
+         }
 
         /* translators: If there are characters in your language that are not supported by Sacramento, translate this to 'off'. Do not translate into your own language. */
         if ( 'off' !== _x( 'on', 'Sacramento font: on or off', 'vgc' ) ) {

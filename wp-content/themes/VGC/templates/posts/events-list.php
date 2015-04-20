@@ -1,6 +1,6 @@
 <?php
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$catSlug = (get_query_var('category_name')) ? get_query_var('category_name') : 'events';
+$paged = get_query_var('paged', 1);
+$catSlug = get_query_var('category_name', 'events');
 $postsPerPage = 3; //get_option( 'posts_per_page' );
 $args = array(
     'posts_per_page' => $postsPerPage,

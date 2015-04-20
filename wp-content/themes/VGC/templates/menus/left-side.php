@@ -1,6 +1,6 @@
 <?php
 $taxonomyName = get_query_var('taxonomy');
-$postType = (get_query_var('post_type')) ? get_query_var('post_type') : 'product';
+$postType = get_query_var('post_type', 'product');
 $termSlug = get_query_var('term');
 $term = get_term_by('slug', $termSlug, $taxonomyName);
 ?>
