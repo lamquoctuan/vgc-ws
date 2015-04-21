@@ -1,10 +1,13 @@
+<?php
+global $user;
+?>
 <div class="my-account">
     <div class="dashboard">
         <div class="page-title mb10">
             <h1>My Dashboard</h1>
         </div>
         <div class="welcome-msg">
-            <p class="hello"><strong>Hello, Nhu Nguyen!</strong>
+            <p class="hello"><strong>Hello, <?php echo $user->first_name.' '.$user->last_name;?>!</strong>
             </p>
 
             <p>From your My Account Dashboard you have the ability to view a snapshot of your
@@ -24,8 +27,8 @@
                         </div>
                         <div class="box-content">
                             <p>
-                                Nhu Nguyen
-                                <br>nhulocnguyen@gmail.com
+                                <?php echo $user->first_name.' '.$user->last_name;?>
+                                <br><?php echo $user->email;?>
                                 <br>
                                 <a href="#">Change Password</a>
                             </p>

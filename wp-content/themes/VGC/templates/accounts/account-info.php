@@ -1,3 +1,6 @@
+<?php
+global $user;
+?>
 <div class="my-account">
     <div class="page-title">
         <h1>Edit Account Information</h1>
@@ -12,13 +15,13 @@
                         <div class="field name-firstname">
                             <label for="firstname" class="required"><em>*</em>First Name</label>
                             <div class="input-box">
-                                <input type="text" id="firstname" name="firstname" value="Nhu" title="First Name" maxlength="255" class="input-text required-entry">
+                                <input type="text" id="firstname" name="lead[first_name]" value="<?php echo $user->first_name;?>" title="First Name" maxlength="255" class="input-text required-entry">
                             </div>
                         </div>
                         <div class="field name-lastname">
                             <label for="lastname" class="required"><em>*</em>Last Name</label>
                             <div class="input-box">
-                                <input type="text" id="lastname" name="lastname" value="Nguyen" title="Last Name" maxlength="255" class="input-text required-entry">
+                                <input type="text" id="lastname" name="lead[last_name]" value="<?php echo $user->last_name;?>" title="Last Name" maxlength="255" class="input-text required-entry">
                             </div>
                         </div>
                     </div>
@@ -26,7 +29,7 @@
                 <li>
                     <label for="email" class="required"><em>*</em>Email Address</label>
                     <div class="input-box">
-                        <input type="text" name="email" id="email" value="nhulocnguyen@gmail.com" title="Email Address" class="input-text required-entry validate-email">
+                        <input type="text" name="lead[email]" id="email" value="<?php echo $user->email;?>" title="Email Address" class="input-text required-entry validate-email">
                     </div>
                 </li>
                 <li class="control">

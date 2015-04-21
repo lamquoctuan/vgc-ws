@@ -118,3 +118,9 @@ html[xmlns] .ma-banner8-container .slides {
 .ma-banner8-container .flexslider .slides {
     zoom: 1;
 }
+
+/*form validate*/
+.validation-failed {
+    border: 1px dashed #eb340a !important;
+    background: #faebe7 !important;
+}

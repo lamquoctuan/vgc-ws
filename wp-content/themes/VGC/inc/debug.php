@@ -8,6 +8,16 @@ if (WP_DEBUG) {
         $filename = basename($template);
         echo '<script>console.log("' . $filename . '");</script>';
     }
+
+    add_action('wp_head', 'show_sessions');
+    function show_sessions()
+    {
+        global $_SESSION, $_POST;
+        echo '<script>
+console.log(\'Session: ' . json_encode($_SESSION) . '\');
+console.log(\'Post: ' . json_encode($_POST) . '\');
+        </script>';
+    }
 }
 
 //add_action( 'wp_footer', 'my_action_javascript' ); // Write our JS below here

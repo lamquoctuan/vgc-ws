@@ -1,15 +1,7 @@
 <?php
-$classesTopRight = array(
-    'ul' => 'links',
-    'li_first' => 'first',
-    'li_last' => 'last'
-);
-$menuTopRight = getMenu('top-nav-right', $classesTopRight);
 $menuMain = getMenu('primary');
 // echo $menuMain['menu_list'];
 $menuLeftSide = getMenuListArray('left-side');
-// echo $menuTopRight['menu_name'];
-// echo $menuTopRight['menu_list'];
 $menuLeftSideHTML = '';
 if (!empty($menuLeftSide)) {
     $menuLeftSideHTML = '<ul id="ma-mobilemenu" class="mobilemenu nav-collapse collapse">';
@@ -45,33 +37,7 @@ if (!empty($menuLeftSide)) {
                         <div class="col-md-3 col-sms12">
                             <p class="welcome-msg">Welcome to Vancouver Gold for Cash!</p>
                         </div>
-                        <div class="col-md-2 col-sms12">
-                            <div class="special-offer"><a href="">Special Offer</a></div>
-                            <div class="link-mobile">
-                                <div class="title-link">
-                                    <h2>Account</h2>
-                                </div>
-                                <div class="link-content">
-                                    <ul class="links">
-                                        <li class="first"><a href="#" title="Account">Account</a>
-                                        </li>
-                                        <li><a href="#" title="Wish List">Wish List</a>
-                                        </li>
-                                        <li class="last"><a href="#" title="My Cart" class="top-link-cart">Cart(0)</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sms12">
-                            <ul class="links">
-                                <li class="first"><a href="" title="Account">Account</a></li>
-                                <li><a href="" title="Wish list">Wish List</a></li>
-                                <li><a href="" title="Cart" class="top-link-cart">Cart (0)</a></li>
-                            </ul>
-
-                        </div>
-
+                        <?php get_template_part('templates/menus/top-right');?>
                     </div>
                 </div>
             </div>

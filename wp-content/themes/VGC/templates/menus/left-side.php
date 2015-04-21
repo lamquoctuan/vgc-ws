@@ -10,11 +10,13 @@ $menuLeftSide = getMenuListArray('left-side');
 $menuLeftSideHTML = '';
 if (!empty($menuLeftSide)) {
     $menuLeftSideHTML = '<div id="pt_vmegamenu" class="pt_vmegamenu">';
-    $numItems = count($menuLeftSide[items]);
+    $numItems = count($menuLeftSide['items']);
     for ($idx=0; $idx<$numItems; $idx++) {
         $class = 'pt_menu';
-        if ($menuLeftSide['items'][$idx]['object_id'] == $term->term_id) {
-            $class .= ' act';
+        if (! empty($term)) {
+            if ($menuLeftSide['items'][$idx]['object_id'] == $term->term_id) {
+                $class .= ' act';
+            }
         }
         if ( $idx==0 ) {
             $class .= ' first';

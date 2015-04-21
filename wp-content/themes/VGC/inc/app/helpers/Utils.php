@@ -16,4 +16,20 @@ class Utils {
             return preg_replace('/_(.?)/e',"strtoupper('$1')",$string);
         }
     }
+
+    public static function isValidEmail($email)
+    {
+        return true;
+    }
+
+    public static function now($format = 'Y-m-d H:i:s')
+    {
+        return gmdate($format);
+    }
+
+    public static function redirectTo($uri, $status = 302)
+    {
+        $url = site_url($uri);
+        wp_redirect($url, $status); exit();
+    }
 }

@@ -1,2 +1,2 @@
 <?php
-echo "account pages";
+do_action('session_check', '/action/dashboard/');

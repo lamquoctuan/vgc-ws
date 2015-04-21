@@ -4,7 +4,7 @@ $menuLeftSide = getMenuListArray('left-side');
 $menuLeftSideHTML = '';
 if (!empty($menuLeftSide)) {
     $menuLeftSideHTML = '<div id="pt_vmegamenu" class="pt_vmegamenu">';
-    for ($idx = 0; $idx < count($menuLeftSide[items]); $idx++) {
+    for ($idx = 0; $idx < count($menuLeftSide['items']); $idx++) {
         $class = 'pt_menu';
         if ($idx == 0) {
             $class .= ' first';
