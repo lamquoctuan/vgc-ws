@@ -74,23 +74,14 @@ global $user;
         </div>
     </form>
     <script type="text/javascript">
-        //<![CDATA[
-//        var dataForm = new VarienForm('form-validate', true);
+//        <![CDATA[
         function setPasswordForm(arg){
             if(arg){
-                $acc('current_password').up(3).show();
-                $acc('current_password').addClassName('required-entry');
-                $acc('password').addClassName('required-entry');
-                $acc('confirmation').addClassName('required-entry');
-
+                $acc('#current_password').closest('.fieldset').show();
             }else{
-                $acc('current_password').up(3).hide();
-                $acc('current_password').removeClassName('required-entry');
-                $acc('password').removeClassName('required-entry');
-                $acc('confirmation').removeClassName('required-entry');
+                $acc('#current_password').closest('.fieldset').hide()
             }
         }
-
-        //]]>
+//        ]]>
     </script>
 </div>
