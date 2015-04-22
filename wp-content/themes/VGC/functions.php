@@ -168,7 +168,7 @@ if ( ! function_exists( 'vgc_enqueue_styles' ) ) :
         wp_enqueue_style( 'vgc-ma.cltool', TEMP_URI . '/assets/css/temp/ma.cltool.css', array(), '20150320' , 'all');
     //    wp_enqueue_style( 'vgc-ma.upsellslider', TEMP_URI . '/assets/css/temp/ma.upsellslider.css', array(), '20150320' , 'all');
         wp_enqueue_style( 'vgc-leftvmegamenu', TEMP_URI . '/assets/css/temp/leftvmegamenu.css', array(), '20150320' , 'all');
-//        wp_enqueue_style( 'vgc-bannersequencener8', TEMP_URI . '/assets/ma.flexslider/css/ma.banner8.css', array(), '20150320' , 'all');
+        wp_enqueue_style( 'vgc-bannersequencener8', TEMP_URI . '/assets/ma.flexslider/css/ma.banner8.css', array(), '20150320' , 'all');
         //    wp_enqueue_style( 'vgc-ma.newslider', TEMP_URI . '/assets/css/temp/ma.newslider.css', array(), '20150320' , 'all');
         wp_enqueue_style( 'vgc-ajax_cart_super', TEMP_URI . '/assets/css/temp/ajax_cart_super.css', array(), '20150320' , 'all');
         //    wp_enqueue_style( 'vgc-jquery-ui', TEMP_URI . '/assets/css/temp/jquery-ui.css', array(), '20150320' , 'all');
@@ -214,8 +214,8 @@ if ( ! function_exists( 'vgc_enqueue_scripts' ) ) :
 //        wp_enqueue_script( 'vgc-controls-js', TEMP_URI . '/assets/js/controls.js', array('vgc-prototype-js','vgc-effects-js'), '20150320', false );
 
 //        wp_enqueue_script( 'vgc-slide-js', TEMP_URI . '/assets/js/ma.jq.slide.js', array(), '20150320', false );
-//        wp_enqueue_script( 'vgc-custommenu-js', TEMP_URI . '/assets/js/custommenu.js', array(), '20150320', false );
-//        wp_enqueue_script( 'vgc-ma.mobilemenu-js', TEMP_URI . '/assets/js/ma.mobilemenu.js', array(), '20150320', false );
+        wp_enqueue_script( 'vgc-custommenu-js', TEMP_URI . '/assets/js/custommenu.js', array(), '20150320', false );
+        wp_enqueue_script( 'vgc-ma.mobilemenu-js', TEMP_URI . '/assets/js/ma.mobilemenu.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-ccard-js', TEMP_URI . '/assets/js/ccard.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-builder-js', TEMP_URI . '/assets/js/builder.js', array(), '20150320', false );
         //    wp_enqueue_script( 'vgc-dragdrop-js', TEMP_URI . '/assets/js/dragdrop.js', array(), '20150320', false );

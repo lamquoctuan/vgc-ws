@@ -690,6 +690,9 @@ button.button {
     margin: 0;
     background: transparent;
     cursor: pointer;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
 }
 
 button.button span {
@@ -1235,6 +1238,9 @@ p.required {
     border: 1px solid #f1f1f1;
     background: #f1f1f1;
     margin: 0 0 25px;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
 }
 
 .breadcrumbs li {
@@ -1411,7 +1417,7 @@ p.required {
     transition: all 0s ease-in-out;
 }
 
-.pager .pages .previous {
+.pager .pages .prev {
     background: url("../images/pager_arrow_left.png") no-repeat 0 0 #f1f1f1;
     transition: all 0s ease-in-out;
     height: 30px;
@@ -1419,7 +1425,7 @@ p.required {
     text-indent: -9999px;
 }
 
-.pager .pages .previous:hover {
+.pager .pages .prev:hover {
     background: url("../images/pager_arrow_left.png") no-repeat 0 100% #0ec300;
     transition: all 0s ease-in-out;
 }
@@ -1436,16 +1442,6 @@ p.required {
     background: #0ec300;
 }
 
-.pager .pages a.next, .pager .pages a.previous {
-    text-transform: lowercase;
-    background: none;
-    color: #666;
-    font-size: 14px;
-}
-
-.pager .pages a.next:hover, .pager .pages a.previous:hover {
-    color: #00A5E8;
-}
 
 .pager .sort-by {
     float: none;
@@ -2286,6 +2282,9 @@ p.welcome-msg {
     margin: 0 auto;
     background: #fff;
     height: 44px;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
 }
 
 .header .form-search label {
@@ -2479,6 +2478,9 @@ p.welcome-msg {
 
 .header .search-container button.button {
     float: right;
+    -webkit-border-radius: 0 5px 5px 0; 
+    -moz-border-radius: 0 5px 5px 0; 
+    border-radius: 0 5px 5px 0;
 }
 
 .header .search-container button.button span {
@@ -3816,6 +3818,9 @@ p.welcome-msg {
     color: #999999;
     padding: 8px 29px;
     font-weight: 400;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
 }
 
 .products-list .link-wishlist:hover, .product-view .link-wishlist:hover {
@@ -7334,6 +7339,9 @@ ol.commentlist {
     padding: 19px 26px 16px;
     border-bottom: 3px solid #323a45;
     background: none;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
 }
 
 /*========================================================*/
@@ -7344,6 +7352,9 @@ ol.commentlist {
     background: url("../images/bg-category.png") no-repeat 14px 12px #eaa720;
     padding: 0;
     border-bottom: 3px solid #e78f13;
+    -webkit-border-radius: 5px 5px 0 0; 
+    -moz-border-radius:  5px 5px 0 0; 
+    border-radius: 5px 5px 0 0; 
 }
 
 .megamenu-title h2 {

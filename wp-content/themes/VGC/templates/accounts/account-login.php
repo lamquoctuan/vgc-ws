@@ -8,7 +8,7 @@ $nonce = wp_create_nonce('form_login');
     <form action="" method="post" id="form_login">
         <input name="form_key" type="hidden" value="<?php echo $nonce; ?>">
 
-        <div class="col2-set">
+        <div class="col2-set mt20">
             <div class="col-1 new-users">
                 <div class="content">
                     <h2>New Customers</h2>
@@ -17,6 +17,13 @@ $nonce = wp_create_nonce('form_login');
                         faster, store multiple shipping addresses, view and track your orders in your account and
                         more.</p>
                 </div>
+               
+                <div class="buttons-set">
+                    <button type="button" title="Create an Account" class="button"
+                            onclick="window.location='<?php echo site_url('/account/register/'); ?>'"><span><span>Create an Account</span></span>
+                    </button>
+                </div>
+                
             </div>
             <div class="col-2 registered-users">
                 <div class="content">
@@ -43,25 +50,20 @@ $nonce = wp_create_nonce('form_login');
                     </ul>
                     <p class="required">* Required Fields</p>
                 </div>
+                
+                <div class="buttons-set">
+                    <a href="<?php echo site_url('/account/forgot');?>" class="f-left">Forgot Your Password?</a>
+                    <button type="button" class="button" title="Login" id="btn_form_login" onclick="return false;">
+                        <span><span>Login</span></span>
+                    </button>
+                </div>
+               
             </div>
         </div>
     </form>
     <div class="col2-set">
-        <div class="col-1 new-users">
-            <div class="buttons-set">
-                <button type="button" title="Create an Account" class="button"
-                        onclick="window.location='<?php echo site_url('/account/register/'); ?>'"><span><span>Create an Account</span></span>
-                </button>
-            </div>
-        </div>
-        <div class="col-2 registered-users">
-            <div class="buttons-set">
-                <a href="<?php echo site_url('/account/forgot');?>" class="f-left">Forgot Your Password?</a>
-                <button type="button" class="button" title="Login" id="btn_form_login" onclick="return false;">
-                    <span><span>Login</span></span>
-                </button>
-            </div>
-        </div>
+        
+        
     </div>
 </div>
 <script type="text/javascript">
