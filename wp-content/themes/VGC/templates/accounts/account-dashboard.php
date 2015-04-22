@@ -7,7 +7,7 @@ global $user;
             <h1>My Dashboard</h1>
         </div>
         <div class="welcome-msg">
-            <p class="hello"><strong>Hello, <?php echo $user->first_name.' '.$user->last_name;?>!</strong>
+            <p class="hello"><strong>Hello, <?php echo $user->first_name . ' ' . $user->last_name; ?>!</strong>
             </p>
 
             <p>From your My Account Dashboard you have the ability to view a snapshot of your
@@ -23,14 +23,14 @@ global $user;
                     <div class="box">
                         <div class="box-title">
                             <h3>Contact Information</h3>
-                            <a href="account-info.html">Edit</a>
+                            <a href="<?php echo site_url('/account/info/'); ?>">Edit</a>
                         </div>
                         <div class="box-content">
                             <p>
-                                <?php echo $user->first_name.' '.$user->last_name;?>
-                                <br><?php echo $user->email;?>
+                                <?php echo $user->first_name . ' ' . $user->last_name; ?>
+                                <br><?php echo $user->email; ?>
                                 <br>
-                                <a href="#">Change Password</a>
+                                <a href="<?php echo site_url('/account/info/'); ?>">Change Password</a>
                             </p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ global $user;
                     <div class="box">
                         <div class="box-title">
                             <h3>Newsletters</h3>
-                            <a href="account-newsletter.html">Edit</a>
+                            <a href="<?php echo site_url('/account/newsletter-subscription/'); ?>">Edit</a>
                         </div>
                         <div class="box-content">
                             <p>
@@ -59,14 +59,14 @@ global $user;
                             <h4>Default Billing Address</h4>
                             <address>
                                 You have not set a default billing address.<br>
-                                <a href="#">Edit Address</a>
+                                <a href="<?php echo site_url('/account/address/'); ?>">Edit Address</a>
                             </address>
                         </div>
                         <div class="col-2">
                             <h4>Default Shipping Address</h4>
                             <address>
                                 You have not set a default shipping address.<br>
-                                <a href="#">Edit Address</a>
+                                <a href="<?php echo site_url('/account/address/'); ?>">Edit Address</a>
                             </address>
                         </div>
                     </div>
@@ -76,14 +76,14 @@ global $user;
         <div class="box-account box-reviews">
             <div class="box-head">
                 <h2>My Recent Reviews</h2>
-                <a href="account-review.html">View All Reviews</a>
+                <a href="<?php echo site_url('/account/product-reviews/'); ?>">View All Reviews</a>
             </div>
             <ol id="my_recent_reviews">
                 <li class="item last odd">
                     <span class="number">1</span>
 
                     <div class="details">
-                        <h3 class="product-name"><a href="account-review-detail.html">Jewelry
+                        <h3 class="product-name"><a href="<?php echo site_url('/account/product-review/'); ?>">Jewelry
                                 Name</a></h3>
                     </div>
                 </li>
