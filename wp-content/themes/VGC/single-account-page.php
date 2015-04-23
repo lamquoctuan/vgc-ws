@@ -3,8 +3,10 @@
  * Template Name: Account
  */
 do_action('session_check');
-$user = new \app\models\User();
-$user->findOne($_SESSION['cus_id']);
+if (isset($_SESSION['cus_id'])) {
+    $user = new \app\models\User();
+    $user->findOne($_SESSION['cus_id']);
+}
 get_header();
 if (have_posts()) :
     while (have_posts()) : the_post();
