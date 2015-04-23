@@ -9,6 +9,7 @@ class User
     public $last_name;
     public $email;
     public $resetPassToken;
+    public $subscribed;
     private $password;
     public $hashed;
 
@@ -23,6 +24,7 @@ class User
             $this->_newAttributes['first_name'] = $this->first_name = \app\helpers\Utils::arrayGet('first_name', $lead);
             $this->_newAttributes['last_name'] = $this->last_name = \app\helpers\Utils::arrayGet('last_name', $lead);
             $this->_newAttributes['email'] = $this->email = \app\helpers\Utils::arrayGet('email', $lead);
+            $this->_newAttributes['subscribed'] = $this->email = \app\helpers\Utils::arrayGet('subscribed', $lead);
             $this->password = \app\helpers\Utils::arrayGet('password', $lead);
         }
     }
@@ -48,7 +50,7 @@ class User
 
     public function findOne($id) {
         global $wpdb;
-        $query = "SELECT id, email, first_name, last_name, email, hashed, reset_pass_token FROM {$this->tableName} WHERE id = '{$id}'";
+        $query = "SELECT id, email, first_name, last_name, email, hashed, reset_pass_token, subscribed FROM {$this->tableName} WHERE id = '{$id}'";
         $record = $wpdb->get_row($query);
         if ($record != null) {
             foreach($record as $key=>$val) {
@@ -63,7 +65,7 @@ class User
     }
     public function findByEmail($email) {
         global $wpdb;
-        $query = "SELECT id, email, first_name, last_name, email, hashed, reset_pass_token FROM {$this->tableName} WHERE email = '{$email}'";
+        $query = "SELECT id, email, first_name, last_name, email, hashed, reset_pass_token, subscribed FROM {$this->tableName} WHERE email = '{$email}'";
         $record = $wpdb->get_row($query);
         if ($record != null) {
             foreach($record as $key=>$val) {
@@ -112,6 +114,7 @@ class User
                     'last_name' => $this->last_name,
                     'email' => $this->email,
                     'hashed' => $this->hashed,
+                    'subscribed' => $this->subscribed,
                     'date_created' => \app\helpers\Utils::now()
                 ),
                 array(

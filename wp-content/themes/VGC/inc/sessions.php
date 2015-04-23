@@ -67,7 +67,7 @@ function vgcActionCheck()
     if (!isset($_POST['form_key'])) {
         return false;
     }
-    $actions = array('form_register', 'form_login', 'form_info');
+    $actions = array('form_register', 'form_login', 'form_info', 'form_subscribe');
     foreach ($actions as $action) {
         if (wp_verify_nonce($_POST['form_key'], $action)) {
             do_action($action);
@@ -133,7 +133,7 @@ function vgcFormLogin()
         $check = $user->checkPassword($leadPass);
         if ($check) {
             $_SESSION['cus_id'] = $user->id;
-//            redirectTo('/account/dashboard/');
+            \app\helpers\Utils::redirectTo('/account/dashboard/');
         }
     } else {
         //user not exists
@@ -181,6 +181,30 @@ function vgcFormInfo()
         }
         if (! empty($leadEmail)) {
             $user->email =$leadEmail;
+        }
+        $user->save();
+    } else {
+        //user not exists
+        error_log('user doesn\'t exists');
+    }
+
+}
+
+add_action('form_subscribe', 'vgcFormSubscribe');
+function vgcFormSubscribe()
+{
+    global $_POST, $_SESSION;
+    $lead = \app\helpers\Utils::arrayGet('lead', $_POST);
+    if (is_null($lead)) {
+        return false;
+    }
+
+    $leadSubscribed = \app\helpers\Utils::arrayGet('subscribed', $lead, 0);
+
+    $user = new \app\models\User();
+    if ($user->findOne($_SESSION['cus_id']) !== false) {
+        if ($user->subscribed !=$leadSubscribed) {
+            $user->subscribed =$leadSubscribed;
         }
         $user->save();
     } else {
