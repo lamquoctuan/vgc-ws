@@ -71,12 +71,12 @@ $jq(document).ready(function(){
        $jq(this).find('.popup').css('display','none');
        
        /*show hide popup*/
-       if(CUSTOMMENU_POPUP_EFFECT == 0) $jq(this).find('.popup').stop(true,true).slideDown('slow');
-       if(CUSTOMMENU_POPUP_EFFECT == 1) $jq(this).find('.popup').stop(true,true).fadeIn('slow');
-       if(CUSTOMMENU_POPUP_EFFECT == 2) $jq(this).find('.popup').stop(true,true).show('slow');
+       //if(CUSTOMMENU_POPUP_EFFECT == 0) $jq(this).find('.popup').stop(true,true).slideDown('slow');
+       //if(CUSTOMMENU_POPUP_EFFECT == 1) $jq(this).find('.popup').stop(true,true).fadeIn('slow');
+       //if(CUSTOMMENU_POPUP_EFFECT == 2) $jq(this).find('.popup').stop(true,true).show('slow');
     },function(){
-       if(CUSTOMMENU_POPUP_EFFECT == 0) $jq(this).find('.popup').stop(true,true).slideUp();
-       if(CUSTOMMENU_POPUP_EFFECT == 1) $jq(this).find('.popup').stop(true,true).fadeOut('slow');
-       if(CUSTOMMENU_POPUP_EFFECT == 2) $jq(this).find('.popup').stop(true,true).hide('fast');
+       //if(CUSTOMMENU_POPUP_EFFECT == 0) $jq(this).find('.popup').stop(true,true).slideUp();
+       //if(CUSTOMMENU_POPUP_EFFECT == 1) $jq(this).find('.popup').stop(true,true).fadeOut('slow');
+       //if(CUSTOMMENU_POPUP_EFFECT == 2) $jq(this).find('.popup').stop(true,true).hide('fast');
     })
 });
